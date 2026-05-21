@@ -1,0 +1,7 @@
+density_group,image_name,instances,metric_conf,draw_conf,resolution_px,TP,FN,FP
+low,train__C-W6-0141.jpg,136,0.25,0.5,800,129,7,23
+low,train__C-W6-0141.jpg,136,0.25,0.5,960,113,23,6
+low,train__C-W6-0141.jpg,136,0.25,0.5,1280,124,12,17
+medium,train__C-W6-0077.jpg,162,0.25,0.5,800,156,6,6
+medium,train__C-W6-0077.jpg,162,0.25,0.5,960,138,24,4
+medium,train__C-W6-0077.jpg,162,0.25,0.5,1280,156,6,3

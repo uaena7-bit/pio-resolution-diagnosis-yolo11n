@@ -1,0 +1,4 @@
+resolution_px,best_conf,images,gt_total,pred_total,MAE,RMSE,MAPE_percent,bias,relative_total_error_percent
+800,0.45,307,64612,64735,12.3,18.31,7.33,0.4,0.19
+960,0.4,307,64612,66096,13.31,19.64,8.17,4.83,2.3
+1280,0.4,307,64612,66264,12.7,19.62,7.59,5.38,2.56

@@ -1,0 +1,10 @@
+case_id,image_name,density_group,instances,metric_conf,draw_conf,resolution_px,TP,FN,FP
+A,val__C-W2-V0007.jpg,ultra_high,571,0.25,0.5,800,545,26,46
+A,val__C-W2-V0007.jpg,ultra_high,571,0.25,0.5,960,559,12,52
+A,val__C-W2-V0007.jpg,ultra_high,571,0.25,0.5,1280,554,17,43
+B,train__K-513.jpg,ultra_high,602,0.25,0.5,800,568,34,84
+B,train__K-513.jpg,ultra_high,602,0.25,0.5,960,578,24,74
+B,train__K-513.jpg,ultra_high,602,0.25,0.5,1280,579,23,70
+C,val__C-W2-V0036.jpg,ultra_high,489,0.25,0.5,800,456,33,40
+C,val__C-W2-V0036.jpg,ultra_high,489,0.25,0.5,960,468,21,40
+C,val__C-W2-V0036.jpg,ultra_high,489,0.25,0.5,1280,469,20,22
