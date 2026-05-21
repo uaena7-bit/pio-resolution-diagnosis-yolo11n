@@ -1,0 +1,11 @@
+PIO-GRDB-MD5 7:1:2 leakage audit
+========================================
+
+[PASS] No cross-split leakage by absolute source image path
+[PASS] No cross-split leakage by original basename
+[PASS] No cross-split leakage by image content MD5
+[PASS] No cross-split leakage by inferred source group
+
+Warnings
+----------------
+[WARN] Largest component has 352 images, over 20% of all images. Your --group-regex may be too broad, or source groups are very large.

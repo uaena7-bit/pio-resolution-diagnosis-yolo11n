@@ -1,0 +1,30 @@
+{
+  "train": {
+    "images": 1027,
+    "image_ratio": 0.6906523201075991,
+    "instances": 225771,
+    "instance_ratio": 0.6898236415633937,
+    "avg_instances_per_image": 219.83544303797467
+  },
+  "val": {
+    "images": 153,
+    "image_ratio": 0.10289172831203766,
+    "instances": 36905,
+    "instance_ratio": 0.1127600156437144,
+    "avg_instances_per_image": 241.20915032679738
+  },
+  "test": {
+    "images": 307,
+    "image_ratio": 0.20645595158036315,
+    "instances": 64612,
+    "instance_ratio": 0.19741634279289189,
+    "avg_instances_per_image": 210.46254071661238
+  },
+  "total": {
+    "images": 1487,
+    "image_ratio": 1.0,
+    "instances": 327288,
+    "instance_ratio": 1.0,
+    "avg_instances_per_image": 220.0995292535306
+  }
+}

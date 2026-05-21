@@ -1,0 +1,29 @@
+{
+  "split": "test",
+  "method": "quartiles_on_evaluation_split",
+  "note": "Thresholds are computed once and reused by default. Use --recompute_thresholds only when changing protocol.",
+  "scale": {
+    "variable": "sqrt_bbox_area_pixels",
+    "q1": 52.24953639358193,
+    "q2": 75.940881698976,
+    "q3": 101.68549853689353,
+    "groups": {
+      "tiny": "sqrt_area <= 52.2495363936",
+      "small": "52.2495363936 < sqrt_area <= 75.9408816990",
+      "medium": "75.9408816990 < sqrt_area <= 101.6854985369",
+      "large": "sqrt_area > 101.6854985369"
+    }
+  },
+  "density": {
+    "variable": "instances_per_image",
+    "q1": 137.0,
+    "q2": 187.0,
+    "q3": 274.5,
+    "groups": {
+      "low": "instances <= 137.0000000000",
+      "medium": "137.0000000000 < instances <= 187.0000000000",
+      "high": "187.0000000000 < instances <= 274.5000000000",
+      "ultra_high": "instances > 274.5000000000"
+    }
+  }
+}
