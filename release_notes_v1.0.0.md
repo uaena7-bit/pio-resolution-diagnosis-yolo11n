@@ -10,5 +10,7 @@ Included updates:
 - clarified that Fig. 3 and Fig. 4 use ordinary subgroup AP, not strict global-first diagnostic AP;
 - updated README and CITATION metadata for the CSSP-oriented release;
 - retained split manifests, leakage audit summaries, group definitions, bootstrap outputs, counting-calibration outputs, and evaluation scripts.
+- added supplementary source data for Tables S4-S12 and metadata/scripts for Fig. 5 and Figures S1-S2.
 
 The original PIO images are not redistributed. Users should obtain the raw dataset from the original dataset source.
+
