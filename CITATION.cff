@@ -1,1 +1,10 @@
-
+cff-version: 1.2.0
+title: "Leakage-controlled resolution diagnosis for high-density broiler chicken detection using YOLO11n on the PIO dataset"
+message: "If you use these materials, please cite the associated manuscript, this repository, and the original PIO dataset."
+type: software
+authors:
+  - family-names: song
+    given-names: ""
+repository-code: "https://github.com/uaena7-bit/pio-resolution-diagnosis-yolo11n"
+version: "v1.0.0"
+date-released: "2026-05-21"
