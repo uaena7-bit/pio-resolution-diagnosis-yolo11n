@@ -1,34 +1,51 @@
 # pio-resolution-diagnosis-yolo11n
 
-This repository provides reproducibility materials for the manuscript:
+Reproducibility materials for the manuscript:
 
-**Leakage-controlled resolution diagnosis for high-density broiler chicken detection using YOLO11n on the PIO dataset**
+**Leakage-Controlled Input-Resolution Diagnosis for Dense Small-Object Detection in High-Density Visual Signals**
 
-## Contents
+This repository provides the public reproducibility materials corresponding to release **v1.0.0** for the CSSP submission version of the manuscript.
 
-This repository includes:
+## What is included
 
 - leakage-controlled split manifests for PIO-GRDB-MD5-7_1_2;
 - MD5, source-group, and near-duplicate leakage audit summaries;
-- scale and density group definitions;
-- evaluation scripts for standard AP, strict diagnostic AP, bootstrap confidence intervals, counting calibration, latency, and VRAM analysis;
-- source data for supplementary tables and figures.
+- group definitions for scale- and density-stratified analysis;
+- figure source data for the main ordinary-AP figures:
+  - `Fig2_accuracy_cost_tradeoff_source_data.csv`;
+  - `Fig3_locked_ordinary_scale_AP_source_data.csv`;
+  - `Fig4_locked_ordinary_density_AP_source_data.csv`;
+- figure-generation scripts for Fig. 1–4 and Fig. S3;
+- bootstrap and counting-calibration outputs used in the supplementary materials.
 
-## Dataset
+## Important distinction: ordinary AP vs strict diagnostic AP
 
-The original PIO dataset is publicly available from Zenodo:
+The main-manuscript Fig. 3 and Fig. 4 use **ordinary AP** values from the ordinary scale- and density-stratified evaluation tables.
 
-- PIO dataset DOI: 10.5281/zenodo.16686320
+They should not be confused with strict global-first diagnostic AP, which is used only as a supplementary diagnostic analysis. Strict diagnostic AP is not a replacement for standard global AP or ordinary subgroup AP.
 
-This repository does not redistribute the original PIO images. It provides derived split files, audit summaries, scripts, and result tables for reproducibility.
+## Reproducing Fig. 2–4
 
-## Main experimental settings
+Install the minimal plotting dependencies:
 
-- Dataset split: PIO-GRDB-MD5-7_1_2
-- Detector: YOLO11n
-- Input resolutions: 800, 960, and 1280 px
-- Evaluation: global AP, scale-specific AP, density-specific AP, bootstrap confidence intervals, counting calibration, latency, and VRAM
+```bash
+pip install pandas matplotlib
+```
 
-## Citation
+From the repository root, run:
 
-Please cite the associated manuscript, this repository, and the original PIO dataset when using these materials.
+```bash
+python evaluation_scripts/make_figure2_accuracy_cost_tradeoff.py
+python evaluation_scripts/make_figure3_ordinary_scale_AP.py
+python evaluation_scripts/make_figure4_ordinary_density_AP.py
+```
+
+The generated figures will be written to the `figures/` directory as PNG and PDF files.
+
+## Data availability note
+
+The original PIO images are not redistributed in this repository. Users should obtain the raw PIO dataset from the original dataset source and then use the released split manifests and scripts for reproduction.
+
+## Release note
+
+This release overwrites the earlier v1.0.0 materials with the final CSSP-oriented reproducibility package. The release is intended to match the final submission manuscript and its Data Availability statement.
