@@ -1,4 +1,4 @@
-# pio-resolution-diagnosis-yolo11n
+﻿# pio-resolution-diagnosis-yolo11n
 
 Reproducibility materials for the manuscript:
 
@@ -15,7 +15,7 @@ This repository provides the public reproducibility materials corresponding to r
   - `Fig2_accuracy_cost_tradeoff_source_data.csv`;
   - `Fig3_locked_ordinary_scale_AP_source_data.csv`;
   - `Fig4_locked_ordinary_density_AP_source_data.csv`;
-- figure-generation scripts for Fig. 1–4 and Fig. S3;
+- figure-generation scripts for Fig. 1鈥? and Fig. S3;
 - bootstrap and counting-calibration outputs used in the supplementary materials.
 
 ## Important distinction: ordinary AP vs strict diagnostic AP
@@ -24,7 +24,7 @@ The main-manuscript Fig. 3 and Fig. 4 use **ordinary AP** values from the ordina
 
 They should not be confused with strict global-first diagnostic AP, which is used only as a supplementary diagnostic analysis. Strict diagnostic AP is not a replacement for standard global AP or ordinary subgroup AP.
 
-## Reproducing Fig. 2–4
+## Reproducing Fig. 2鈥?
 
 Install the minimal plotting dependencies:
 
@@ -49,3 +49,4 @@ The original PIO images are not redistributed in this repository. Users should o
 ## Release note
 
 This release overwrites the earlier v1.0.0 materials with the final CSSP-oriented reproducibility package. The release is intended to match the final submission manuscript and its Data Availability statement.
+

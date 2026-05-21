@@ -1,26 +1,22 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-make_figure1_final_animals_v2.py
+Figure 1 workflow generator for the CSSP submission.
 
-Final deterministic Figure 1 generator.
+This script creates a deterministic four-module workflow schematic:
+PIO dataset -> leakage-controlled split -> YOLO11n training -> evaluation outputs.
 
-Why v2:
-- The earlier script used a different deterministic layout from the AI mock-up, so it could look
-  different and text could overflow on some systems.
-- This version is tuned to match the accepted 4-step mock-up more closely:
-  real PIO image -> leakage-controlled split -> YOLO11n training -> evaluation outputs.
-- It avoids fake quantitative plots/tables and invented numerical values.
-- It automatically accepts either:
-    PIO_dataset_example.jpg
-    PIO_dataset_example.jpg.png
-  in the figure_assets folder.
+The generated figure uses a real PIO image panel when a local image is provided
+and contains no quantitative result panels. Quantitative figures are generated separately from CSV source data. It is intended for workflow visualization only.
+
+Expected local input:
+    figure_assets/PIO_dataset_example.jpg or .png, or --pio-image PATH
 
 Outputs:
-  Figure1_workflow_font_consistent.png
-  Figure1_workflow_font_consistent.tif
-  Figure1_workflow_font_consistent.svg
-  Figure1_workflow_font_consistent.pdf
+    Figure1_workflow_font_consistent.png
+    Figure1_workflow_font_consistent.tif
+    Figure1_workflow_font_consistent.svg
+    Figure1_workflow_font_consistent.pdf
 """
 
 from __future__ import annotations
@@ -141,7 +137,7 @@ def add_bullet_section(ax, x, y, w, h, title, bullets):
     round_box(ax, x, y, w, h, radius=0.006, lw=0.55, fc="white", ec=LIGHT_EDGE, z=4)
     ax.text(x + w*0.055, y + h*0.70, title, ha="left", va="center",
             fontsize=6.7, fontweight="bold", color="0.02", zorder=6)
-    text = "\n".join([f"• {b}" for b in bullets])
+    text = "\n".join([f"鈥?{b}" for b in bullets])
     ax.text(x + w*0.065, y + h*0.34, text, ha="left", va="center",
             fontsize=5.55, linespacing=1.15, color="0.02", zorder=6)
 
@@ -298,7 +294,7 @@ def build_figure(pio_image_path: Path, out_dir: Path, basename: str, crop=True):
         "ps.fonttype": 42,
     })
 
-    # 4:3 figure, matching the accepted mock-up direction.
+    # 4:3 figure layout for manuscript workflow visualization.
     fig, ax = plt.subplots(figsize=(180*MM, 135*MM), dpi=DPI)
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
@@ -352,3 +348,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
