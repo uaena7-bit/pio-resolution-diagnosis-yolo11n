@@ -50,4 +50,9 @@ The original PIO images are not redistributed in this repository. Users should o
 
 This release overwrites the earlier v1.0.0 materials with the final CSSP-oriented reproducibility package. The release is intended to match the final submission manuscript and its Data Availability statement.
 
+## Citation
+
+If you use these reproducibility materials, please cite:
+
+Song, Y.: Reproducibility materials for leakage-controlled input-resolution diagnosis of dense small-object detection on PIO. GitHub repository, release v1.0.0. https://github.com/uaena7-bit/pio-resolution-diagnosis-yolo11n (2026). Accessed 21 May 2026.
 

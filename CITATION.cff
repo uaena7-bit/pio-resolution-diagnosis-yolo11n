@@ -1,9 +1,10 @@
-cff-version: 1.2.0
-title: "Reproducibility materials for leakage-controlled input-resolution diagnosis for dense small-object detection"
+﻿cff-version: 1.2.0
+title: "Reproducibility materials for leakage-controlled input-resolution diagnosis of dense small-object detection on PIO"
 message: "If you use these reproducibility materials, please cite the associated manuscript and this repository release."
 type: software
 authors:
-  - name: "uaena7-bit"
+  - family-names: Song
+    given-names: Yanqi
 repository-code: "https://github.com/uaena7-bit/pio-resolution-diagnosis-yolo11n"
 url: "https://github.com/uaena7-bit/pio-resolution-diagnosis-yolo11n"
 version: "1.0.0"
