@@ -1,4 +1,4 @@
-﻿cff-version: 1.2.0
+cff-version: 1.2.0
 title: "Reproducibility materials for leakage-controlled input-resolution diagnosis of dense small-object detection on PIO"
 message: "If you use these reproducibility materials, please cite the associated manuscript and this repository release."
 type: software
