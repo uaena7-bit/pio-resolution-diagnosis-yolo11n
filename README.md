@@ -56,3 +56,5 @@ If you use these reproducibility materials, please cite:
 
 Song, Y.: Reproducibility materials for leakage-controlled input-resolution diagnosis of dense small-object detection on PIO. GitHub repository, release v1.0.0. https://github.com/uaena7-bit/pio-resolution-diagnosis-yolo11n (2026). Accessed 21 May 2026.
 
+Figure S2 was updated to a unified line-chart style consistent with main-text Fig. 3; the underlying strict diagnostic AP values were unchanged.
+
