@@ -1,115 +1,65 @@
-﻿# pio-resolution-diagnosis-yolo11n
+# Leakage-Controlled Input-Resolution Diagnosis for Dense Small-Object Detection
 
-Reproducibility materials for the manuscript:
+This repository provides the reproducibility materials for the CSSP manuscript:
 
 **Leakage-Controlled Input-Resolution Diagnosis for Dense Small-Object Detection in High-Density Visual Signals**
 
-This repository provides the public reproducibility materials corresponding to release **v1.0.0** for the final pre-submission CSSP manuscript.
+The materials support a protocol-oriented study of dense small-object detection. The focus is not a new detector architecture, but a reproducible workflow for leakage-controlled input-resolution evaluation, scale-density-counting-deployment diagnosis, and task-objective-driven resolution selection.
 
-## What is included
+## Repository contents
 
-- leakage-controlled split manifests for `PIO-GRDB-MD5-7_1_2`;
-- MD5, source-group, and near-duplicate leakage audit summaries;
-- group definitions for scale- and density-stratified analysis;
-- figure source data for the main ordinary-AP figures:
-  - `Fig2_accuracy_cost_tradeoff_source_data.csv`;
-  - `Fig3_locked_ordinary_scale_AP_source_data.csv`;
-  - `Fig4_locked_ordinary_density_AP_source_data.csv`;
-- figure-generation scripts for Fig. 1-4, Fig. S2, and Fig. S3;
-- supplementary source data for Tables S4-S15;
-- bootstrap and counting-calibration outputs used in the supplementary materials.
+This release includes:
 
-## Final v1.0.0 consistency update
+- leakage-controlled split manifests and leakage-audit summaries;
+- group definitions for scale- and density-stratified diagnosis;
+- evaluation scripts and locked source data for main and supplementary figures/tables;
+- bootstrap uncertainty outputs and counting-calibration materials;
+- source data and scripts for Fig. 2, Fig. 3, and Fig. 4;
+- supplementary source data for Tables S4-S15 and metadata/scripts for Fig. 5 and Figs. S1-S3;
+- YOLO11n seed-repeatability source data across 800, 960, and 1280 pixels using seeds 42, 123, and 2024;
+- YOLOv8n cross-detector robustness-check source data for Table S13;
+- locked-weight YOLO11n deployment benchmark source data and raw repeat logs for Table S14;
+- multi-objective resolution-selection source data and README for Table S15;
+- paper-linked reproduction scripts for Tables S13-S15;
+- raw traceability logs for the YOLOv8n timing recheck and the YOLO11n locked-weight deployment benchmark.
 
-The final v1.0.0 update synchronizes the repository with the CSSP pre-submission manuscript and supplementary materials. It includes:
+## Main source-data directories
 
-- clarified ordinary subgroup AP versus strict global-first diagnostic AP notes;
-- revised Table S6 source data with full-test-set global mAP50-95 reference values;
-- standardized Table S12 probability-column names as `P(Delta < 0)` and `P(Delta > 0)` in the supplementary materials;
-- documented the hardware setting as a single NVIDIA GeForce RTX 5060 Laptop GPU with 8 GB dedicated GPU memory;
-- documented the optional GitHub-only continuous density diagnostic workflow for future reuse.
+- `split_manifest/`: fixed leakage-controlled train/validation/test split manifests.
+- `group_definitions/`: scale and density group definitions used for diagnostic analysis.
+- `audit_summaries/`: leakage-control and near-duplicate audit summaries.
+- `figure_source_data/`: locked source data used for main-text figures.
+- `supplementary_source_data/`: source data for supplementary tables, including Tables S4-S15.
+- `supplementary_figures/`: supplementary figure files and related source data.
+- `bootstrap/`: bootstrap uncertainty and delta-difference outputs.
+- `counting_calibration/`: counting-threshold calibration and confidence-sweep outputs.
+- `evaluation_scripts/`: reproduction scripts for evaluation, figure generation, and newly added Tables S13-S15.
+- `raw_logs/`: traceability logs retained separately from cleaned table source data.
 
-No changes were made to the leakage-controlled split, leakage audit results, model training outputs, prediction caches, primary AP results, bootstrap source values, or counting-calibration source values.
+## Key final table source data
 
-## Important distinction: ordinary AP vs strict diagnostic AP
+- `supplementary_source_data/TableS11_YOLO11n_seed_repeatability_three_resolutions.csv`
+- `supplementary_source_data/TableS13_YOLOv8n_cross_detector_accuracy_seed42.csv`
+- `supplementary_source_data/TableS14_YOLO11n_deployment_benchmark_locked_weights.csv`
+- `supplementary_source_data/TableS15_multi_objective_resolution_selection.csv`
 
-The main-manuscript Fig. 3 and Fig. 4 use **ordinary subgroup AP** values from the ordinary scale- and density-stratified evaluation tables.
+Supporting README files are provided for Tables S13-S15 where additional interpretation notes are required.
 
-They should not be confused with **strict global-first diagnostic AP**, which is used only as a supplementary contribution-oriented diagnostic analysis. Strict diagnostic AP preserves the global ranked prediction list and global matching results before attributing matched true positives to predefined groups. Therefore, strict diagnostic AP values are not directly comparable with ordinary subgroup AP values in Figs. 3 and 4 or with standard global AP.
+## Interpretation notes
 
-## Reproducing Fig. 2-4
+- YOLOv8n is used only as a cross-detector robustness check, not as a detector-ranking benchmark.
+- Strict global-first diagnostic AP is an auxiliary contribution-oriented diagnostic measure and is not directly comparable with ordinary subgroup AP or standard global AP.
+- Table S14 peak memory refers to validation/inference CUDA memory, not training peak VRAM.
+- In Table S14, total latency is the median end-to-end time per image across formal repeats and may not equal the sum of independently computed stage medians.
+- Table S15 identifies 960 pixels as a balanced knee-point candidate only under the specified multi-objective weighting scheme. It does not claim that 960 pixels is universally optimal.
+- The 1280-pixel setting remains the accuracy-oriented setting, whereas 800 pixels remains the lowest-cost baseline.
 
-Install the minimal plotting dependencies:
+## Data availability
 
-```bash
-pip install pandas matplotlib
-```
-
-From the repository root, run:
-
-```bash
-python evaluation_scripts/make_figure2_accuracy_cost_tradeoff.py
-python evaluation_scripts/make_figure3_ordinary_scale_AP.py
-python evaluation_scripts/make_figure4_ordinary_density_AP.py
-```
-
-The generated figures will be written to the `figures/` directory as PNG and PDF files.
-
-## Optional GitHub-only continuous density diagnostic
-
-The reviewer-requested continuous density diagnostic is treated as an optional GitHub-only reproducibility aid rather than a manuscript result. The script
-
-```bash
-python evaluation_scripts/make_figureS4_continuous_density_diagnostic.py
-```
-
-expects a per-image diagnostic CSV at:
-
-```text
-figure_source_data/FigureS4_continuous_density_diagnostic_source_data.csv
-```
-
-A schema template is provided as:
-
-```text
-figure_source_data/FigureS4_continuous_density_diagnostic_source_data_TEMPLATE.csv
-```
-
-This optional figure is intended for future reuse when local per-image prediction outcome caches are available. It is not used to change the locked split, primary AP values, counting-calibration values, or manuscript conclusions.
-
-## Data availability note
-
-The original PIO images are not redistributed in this repository. Users should obtain the raw PIO dataset from the original dataset source and then use the released split manifests and scripts for reproduction.
+The original PIO images are not redistributed in this repository. Users should obtain the raw dataset from the original dataset source. The materials here provide split manifests, audit summaries, source data, scripts, and traceability logs needed to inspect or reproduce the reported analyses after authorized access to the raw images.
 
 ## Citation
 
-If you use these reproducibility materials, please cite:
+If you use these materials, please cite the manuscript and this repository release:
 
-Song, Y.: Reproducibility materials for leakage-controlled input-resolution diagnosis of dense small-object detection on PIO. GitHub repository, release v1.0.0. https://github.com/uaena7-bit/pio-resolution-diagnosis-yolo11n (2026). Accessed 22 May 2026.
-
-## Final CSSP revision additions
-
-This release has been updated to match the final CSSP manuscript and supplementary materials. The supplementary source data now cover Tables S4-S15.
-
-The final paper-oriented additions include:
-
-- `supplementary_source_data/TableS11_YOLO11n_seed_repeatability_three_resolutions.csv`  
-  YOLO11n seed-repeatability check across 800, 960, and 1280 pixels using seeds 42, 123, and 2024.
-
-- `supplementary_source_data/TableS13_YOLOv8n_cross_detector_accuracy_seed42.csv`  
-  YOLOv8n cross-detector robustness check under the same leakage-controlled resolution protocol.
-
-- `supplementary_source_data/TableS14_YOLO11n_deployment_benchmark_locked_weights.csv`  
-  Locked-weight YOLO11n deployment benchmark with GFLOPs, preprocessing time, inference time, postprocessing time, total latency, and validation/inference peak CUDA memory.
-
-- `supplementary_source_data/TableS15_multi_objective_resolution_selection.csv`  
-  Multi-objective resolution-selection analysis combining test accuracy, training cost, GFLOPs, latency, and memory pressure.
-
-Raw traceability logs are provided in `raw_logs/`, and final paper-linked reproduction scripts are provided in `evaluation_scripts/`.
-
-Important interpretation notes:
-
-- YOLOv8n is used only as a cross-detector robustness check, not as a detector-ranking benchmark.
-- Table S14 peak memory refers to validation/inference CUDA memory, not training peak VRAM.
-- Table S15 identifies 960 pixels as a balanced knee-point candidate only under the specified multi-objective weighting scheme. It does not claim that 960 pixels is universally optimal.
-- The 1280-pixel setting remains the accuracy-oriented setting, whereas 800 pixels remains the lowest-cost baseline.
+Song, Y. *Leakage-Controlled Input-Resolution Diagnosis for Dense Small-Object Detection in High-Density Visual Signals*. GitHub repository release v1.0.0. Accessed 26 May 2026.
