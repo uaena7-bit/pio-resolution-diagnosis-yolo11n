@@ -16,7 +16,7 @@ This repository provides the public reproducibility materials corresponding to r
   - `Fig3_locked_ordinary_scale_AP_source_data.csv`;
   - `Fig4_locked_ordinary_density_AP_source_data.csv`;
 - figure-generation scripts for Fig. 1-4, Fig. S2, and Fig. S3;
-- supplementary source data for Tables S4-S12;
+- supplementary source data for Tables S4-S15;
 - bootstrap and counting-calibration outputs used in the supplementary materials.
 
 ## Final v1.0.0 consistency update
@@ -87,3 +87,29 @@ If you use these reproducibility materials, please cite:
 
 Song, Y.: Reproducibility materials for leakage-controlled input-resolution diagnosis of dense small-object detection on PIO. GitHub repository, release v1.0.0. https://github.com/uaena7-bit/pio-resolution-diagnosis-yolo11n (2026). Accessed 22 May 2026.
 
+## Final CSSP revision additions
+
+This release has been updated to match the final CSSP manuscript and supplementary materials. The supplementary source data now cover Tables S4-S15.
+
+The final paper-oriented additions include:
+
+- `supplementary_source_data/TableS11_YOLO11n_seed_repeatability_three_resolutions.csv`  
+  YOLO11n seed-repeatability check across 800, 960, and 1280 pixels using seeds 42, 123, and 2024.
+
+- `supplementary_source_data/TableS13_YOLOv8n_cross_detector_accuracy_seed42.csv`  
+  YOLOv8n cross-detector robustness check under the same leakage-controlled resolution protocol.
+
+- `supplementary_source_data/TableS14_YOLO11n_deployment_benchmark_locked_weights.csv`  
+  Locked-weight YOLO11n deployment benchmark with GFLOPs, preprocessing time, inference time, postprocessing time, total latency, and validation/inference peak CUDA memory.
+
+- `supplementary_source_data/TableS15_multi_objective_resolution_selection.csv`  
+  Multi-objective resolution-selection analysis combining test accuracy, training cost, GFLOPs, latency, and memory pressure.
+
+Raw traceability logs are provided in `raw_logs/`, and final paper-linked reproduction scripts are provided in `evaluation_scripts/`.
+
+Important interpretation notes:
+
+- YOLOv8n is used only as a cross-detector robustness check, not as a detector-ranking benchmark.
+- Table S14 peak memory refers to validation/inference CUDA memory, not training peak VRAM.
+- Table S15 identifies 960 pixels as a balanced knee-point candidate only under the specified multi-objective weighting scheme. It does not claim that 960 pixels is universally optimal.
+- The 1280-pixel setting remains the accuracy-oriented setting, whereas 800 pixels remains the lowest-cost baseline.

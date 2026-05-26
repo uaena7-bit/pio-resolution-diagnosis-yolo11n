@@ -12,7 +12,7 @@ This release provides the final pre-submission reproducibility materials for the
 - locked source data for main and supplementary figures/tables;
 - evaluation scripts for generating the released figures where source data are available;
 - bootstrap uncertainty and counting-calibration materials;
-- supplementary source data for Tables S4-S12 and metadata/scripts for Fig. 5 and Figs. S1-S3.
+- supplementary source data for Tables S4-S15 and metadata/scripts for Fig. 5 and Figs. S1-S3.
 
 ## Final pre-submission consistency updates
 
@@ -27,3 +27,34 @@ No changes were made to the leakage-controlled split, leakage audit results, mod
 
 The original PIO images are not redistributed. Users should obtain the raw dataset from the original dataset source.
 
+## Final consistency update for CSSP revision
+
+This update synchronizes the repository with the final revised manuscript and supplementary materials.
+
+Added or updated source-data files:
+
+- `supplementary_source_data/TableS11_YOLO11n_seed_repeatability_three_resolutions.csv`
+- `supplementary_source_data/TableS13_YOLOv8n_cross_detector_accuracy_seed42.csv`
+- `supplementary_source_data/TableS14_YOLO11n_deployment_benchmark_locked_weights.csv`
+- `supplementary_source_data/TableS15_multi_objective_resolution_selection.csv`
+
+Added supporting README files:
+
+- `supplementary_source_data/README_TableS13_YOLOv8n_cross_detector_accuracy.md`
+- `supplementary_source_data/README_TableS14_YOLO11n_deployment_benchmark_locked_weights.md`
+- `supplementary_source_data/README_TableS15_multi_objective_resolution_selection.md`
+
+Added raw traceability logs:
+
+- `raw_logs/RawLog_TableS13_YOLOv8n_train_eval_single_run_seed42.csv`
+- `raw_logs/RawLog_TableS13_YOLOv8n_1280_latency_recheck.csv`
+- `raw_logs/RawLog_TableS14_YOLO11n_deployment_benchmark_raw_repeats.csv`
+
+Added final paper-linked reproduction scripts:
+
+- `evaluation_scripts/reproduce_TableS13_YOLOv8n_source_data.py`
+- `evaluation_scripts/reproduce_TableS13_YOLOv8n_train_eval_seed42.py`
+- `evaluation_scripts/reproduce_TableS14_YOLO11n_deployment_benchmark.py`
+- `evaluation_scripts/reproduce_TableS15_multi_objective_resolution_selection.py`
+
+The repository now supports the revised manuscript framing: leakage-controlled resolution evaluation, scale-density-counting-deployment diagnosis, and task-objective-driven resolution selection.
