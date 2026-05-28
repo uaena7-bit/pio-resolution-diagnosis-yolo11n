@@ -85,7 +85,7 @@ The VisDrone2019-DET experiment is provided as an external cross-domain protocol
 
 ## Current manuscript-to-repository map
 
-This repository corresponds to release `v1.0.0` for the CSSP manuscript and the release points to commit `c2944e2`.
+This repository corresponds to release `v1.0.0` for the CSSP manuscript. The release tag identifies the archived repository state used for the manuscript.
 
 | Manuscript / Supplementary item | Repository location |
 |---|---|

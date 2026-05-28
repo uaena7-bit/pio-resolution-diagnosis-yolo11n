@@ -4,7 +4,7 @@ This release provides the reproducibility materials for the CSSP manuscript:
 
 **Leakage-Controlled Input-Resolution Diagnosis for Dense Small-Object Detection in High-Density Visual Signals**
 
-This `v1.0.0` release corresponds to commit `c2944e2`.
+This document describes the reproducibility materials archived under release `v1.0.0`.
 
 Included materials:
 
