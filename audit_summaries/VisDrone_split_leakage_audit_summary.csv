@@ -1,4 +1,4 @@
-﻿split,images,unique_basenames,unique_image_md5,unique_annotation_md5
+split,images,unique_basenames,unique_image_md5,unique_annotation_md5
 train,6471,6471,6469,6471
 val,548,548,547,548
 test-dev,1610,1610,1610,1610

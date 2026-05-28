@@ -1,4 +1,4 @@
-﻿accuracy_weight_alpha_range,selected_resolution,interpretation
+accuracy_weight_alpha_range,selected_resolution,interpretation
 0.000 <= alpha < 0.340,800,cost-prioritized objective; lowest-cost baseline selected
 0.340 <= alpha <= 0.652,960,balanced objective; intermediate resolution selected
 0.652 < alpha <= 1.000,1280,accuracy-prioritized objective; highest-accuracy setting selected

@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Figure 1 workflow generator for the CSSP submission.
@@ -348,5 +348,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-

@@ -1,4 +1,4 @@
-﻿split,image_name,image_path,new_split,component_id,old_split,old_rel_image,md5,source_group,instances,phash,dhash,hash_ok,hash_error
+split,image_name,image_path,new_split,component_id,old_split,old_rel_image,md5,source_group,instances,phash,dhash,hash_ok,hash_error
 train,train__C-W1-0001.jpg,D:\Broiler chicken detection dataset\00_DATASET\PIO-GRDB-MD5-7_1_2\images\train\train__C-W1-0001.jpg,train,0,train,C-W1-0001.jpg,fad0b551d57e9c2fe8906360eba7d2d3,c-w1,741,10705092712425512412,15684546782067436706,True,
 train,train__C-W1-0002.jpg,D:\Broiler chicken detection dataset\00_DATASET\PIO-GRDB-MD5-7_1_2\images\train\train__C-W1-0002.jpg,train,0,train,C-W1-0002.jpg,41142aa981abb1c2537f66ae8314eaa1,c-w1,616,10772649180707605982,15685662268859624610,True,
 train,train__C-W1-0003.jpg,D:\Broiler chicken detection dataset\00_DATASET\PIO-GRDB-MD5-7_1_2\images\train\train__C-W1-0003.jpg,train,0,train,C-W1-0003.jpg,93973acac87b208393bd80e8b7a9686e,c-w1,175,10896521846997300133,1961384144632868076,True,

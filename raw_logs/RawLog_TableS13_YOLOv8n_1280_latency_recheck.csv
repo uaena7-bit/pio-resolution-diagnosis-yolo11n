@@ -1,4 +1,4 @@
-﻿run_id,model,resolution,seed,split,imgsz,batch,workers,conf,iou,max_det,precision,recall,map50,map50_95,preprocess_ms_per_img,inference_ms_per_img,postprocess_ms_per_img,total_ms_per_img,note
+run_id,model,resolution,seed,split,imgsz,batch,workers,conf,iou,max_det,precision,recall,map50,map50_95,preprocess_ms_per_img,inference_ms_per_img,postprocess_ms_per_img,total_ms_per_img,note
 Y8_M3_1280_test_recheck_01,YOLOv8n,1280,42,test,1280,2,0,0.001,0.70,1000,0.938,0.943,0.974,0.757,1.1,5.6,1.6,8.3,Independent re-run after initial single-run timing anomaly.
 Y8_M3_1280_test_recheck_02,YOLOv8n,1280,42,test,1280,2,0,0.001,0.70,1000,0.938,0.943,0.974,0.757,1.1,5.1,1.4,7.6,Independent re-run after initial single-run timing anomaly.
 Y8_M3_1280_test_recheck_03,YOLOv8n,1280,42,test,1280,2,0,0.001,0.70,1000,0.938,0.943,0.974,0.757,1.2,5.3,1.4,7.9,Independent re-run after initial single-run timing anomaly.

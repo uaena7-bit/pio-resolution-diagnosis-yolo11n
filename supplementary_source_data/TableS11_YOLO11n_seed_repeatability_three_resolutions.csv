@@ -1,4 +1,4 @@
-﻿resolution,seed,val_map50,val_map50_95,test_map50,test_map50_95,training_time_h,training_time_note
+resolution,seed,val_map50,val_map50_95,test_map50,test_map50_95,training_time_h,training_time_note
 800,42,0.9750,0.7390,0.9643,0.7199,4.480,measured
 800,123,0.9750,0.7410,0.9656,0.7244,5.364,measured
 800,2024,0.9760,0.7460,0.9650,0.7220,5.573,measured

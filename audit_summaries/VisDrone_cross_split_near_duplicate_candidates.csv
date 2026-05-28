@@ -1,4 +1,4 @@
-﻿split_a,image_a,split_b,image_b,dhash_hamming,ssim_256,confirmed_ssim_ge_0_95
+split_a,image_a,split_b,image_b,dhash_hamming,ssim_256,confirmed_ssim_ge_0_95
 train,D:\Broiler chicken detection dataset\00_DATASET\VisDrone2019-DET\VisDrone2019-DET-train\images\0000357_00981_d_0000661.jpg,val,D:\Broiler chicken detection dataset\00_DATASET\VisDrone2019-DET\VisDrone2019-DET-val\images\0000356_02941_d_0000644.jpg,5,0.539672,False
 train,D:\Broiler chicken detection dataset\00_DATASET\VisDrone2019-DET\VisDrone2019-DET-train\images\9999960_00000_d_0000136.jpg,val,D:\Broiler chicken detection dataset\00_DATASET\VisDrone2019-DET\VisDrone2019-DET-val\images\0000356_01765_d_0000638.jpg,6,0.191281,False
 train,D:\Broiler chicken detection dataset\00_DATASET\VisDrone2019-DET\VisDrone2019-DET-train\images\9999960_00000_d_0000136.jpg,val,D:\Broiler chicken detection dataset\00_DATASET\VisDrone2019-DET\VisDrone2019-DET-val\images\0000356_04705_d_0000653.jpg,5,0.217254,False
