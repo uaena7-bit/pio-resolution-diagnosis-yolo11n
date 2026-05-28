@@ -26,3 +26,15 @@ Included materials:
 No changes were made to the leakage-controlled split, leakage-audit pass/fail results, primary dataset partition, or original PIO image data. The additional materials support the manuscript framing: leakage-controlled input-resolution evaluation, scale-density-counting-deployment diagnosis, and task-objective-driven resolution selection.
 
 The original PIO images are not redistributed. Users should obtain the raw dataset from the original dataset source.
+
+## CSSP reproducibility materials update for deployment, sensitivity, and external stress testing
+
+This update adds or refreshes source data, audit outputs, raw logs, and scripts for:
+
+- the 30-repeat YOLO11n locked-weight deployment benchmark used for Table S14;
+- the updated multi-objective resolution-selection source data used for Table S15;
+- the multi-objective weight-sensitivity analysis used for Table S16;
+- the VisDrone2019-DET external cross-domain stress-test source data used for Table S17;
+- the auxiliary duplicate audit of the official VisDrone train/validation/test-dev splits.
+
+The VisDrone2019-DET experiment is included as a directional protocol-transfer demonstration and is not intended as a VisDrone state-of-the-art benchmark. The original PIO and VisDrone images are not redistributed.

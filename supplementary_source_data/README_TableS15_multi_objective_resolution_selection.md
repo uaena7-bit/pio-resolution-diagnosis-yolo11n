@@ -1,34 +1,13 @@
-# Table S15 — Multi-objective Resolution-selection Analysis
+# Table S15 — Multi-objective resolution-selection analysis
 
-This file documents Table S15 source data.
+This table uses main YOLO11n seed42 standard test mAP50-95, seed42 training time, GFLOPs, and 30-repeat locked-weight deployment latency and peak reserved CUDA memory from Table S14.
 
-The analysis combines main YOLO11n seed42 test accuracy with deployment and cost indicators:
+Default score:
 
-- main test mAP50-95
-- seed42 training time
-- GFLOPs
-- locked-weight total latency
-- locked-weight peak reserved memory
+```text
+Score = 0.50*Accuracy_norm + 0.20*TrainingEfficiency_norm + 0.10*GFLOPsEfficiency_norm + 0.10*LatencyEfficiency_norm + 0.10*MemoryEfficiency_norm
+```
 
-Deployment indicators are read from:
+Accuracy is normalized as a benefit metric: norm(x) = (x - x_min) / (x_max - x_min). Training time, GFLOPs, latency, and memory are normalized as cost-efficiency metrics: norm_cost_eff(x) = (x_max - x) / (x_max - x_min).
 
-supplementary_source_data/TableS14_YOLO11n_deployment_benchmark_locked_weights.csv
-
-Default weights:
-
-- accuracy: 0.50
-- training time efficiency: 0.20
-- GFLOPs efficiency: 0.10
-- latency efficiency: 0.10
-- memory efficiency: 0.10
-
-Accuracy is treated as a benefit metric. Training time, GFLOPs, latency, and memory are treated as cost metrics.
-
-Interpretation:
-
-Under this explicit task-objective weighting, 960 pixels is identified as the balanced knee-point candidate.
-This does not mean that 960 is universally optimal.
-The 1280-pixel setting remains the accuracy-oriented setting, whereas 800 pixels remains the lowest-cost setting.
-
-Pareto analysis alone does not select a single resolution because the settings represent different task-dependent trade-offs.
-Therefore, the weighted score is reported as an explicit resolution-selection rule rather than as an absolute ranking of detector quality.
+The score is not intended as a universal utility function. It provides a transparent example of task-objective-dependent resolution selection under one explicit weighting scheme. Different deployment objectives may select 800 or 1280 pixels.

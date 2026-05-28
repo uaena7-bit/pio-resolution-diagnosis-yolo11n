@@ -63,3 +63,21 @@ The original PIO images are not redistributed in this repository. Users should o
 If you use these materials, please cite the manuscript and this repository release:
 
 Song, Y. *Leakage-Controlled Input-Resolution Diagnosis for Dense Small-Object Detection in High-Density Visual Signals*. GitHub repository release v1.0.0. Accessed 26 May 2026.
+
+## CSSP reproducibility materials update for deployment, sensitivity, and external stress testing
+
+This repository includes the source data and scripts used for the revised deployment, multi-objective sensitivity, and external cross-domain stress-test materials:
+
+- `supplementary_source_data/TableS14_YOLO11n_deployment_benchmark_locked_weights.csv`
+- `supplementary_source_data/TableS15_multi_objective_resolution_selection.csv`
+- `supplementary_source_data/TableS16_multi_objective_weight_sensitivity.csv`
+- `supplementary_source_data/TableS17_VisDrone_YOLO11n_cross_domain_resolution_demo.csv`
+- `raw_logs/RawLog_TableS14_YOLO11n_deployment_recheck30_raw_repeats.csv`
+- `audit_summaries/VisDrone_split_leakage_audit_summary.csv`
+- `audit_summaries/VisDrone_cross_split_near_duplicate_candidates.csv`
+- `evaluation_scripts/reproduce_TablesS14_S16_deployment_and_weight_sensitivity.py`
+- `evaluation_scripts/prepare_TableS17_VisDrone2019_DET_for_YOLO.py`
+- `evaluation_scripts/reproduce_TableS17_VisDrone_YOLO11n_3res_seed42.py`
+- `evaluation_scripts/audit_TableS17_VisDrone2019_DET_split_leakage.py`
+
+The VisDrone2019-DET experiment is provided as an external cross-domain protocol demonstration, not as a VisDrone state-of-the-art benchmark. The original PIO and VisDrone images are not redistributed.

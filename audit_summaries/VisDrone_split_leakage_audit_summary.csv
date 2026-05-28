@@ -1,0 +1,9 @@
+﻿split,images,unique_basenames,unique_image_md5,unique_annotation_md5
+train,6471,6471,6469,6471
+val,548,548,547,548
+test-dev,1610,1610,1610,1610
+cross_split_basename_overlap_pairs,0,,,
+cross_split_image_md5_duplicate_pairs,0,,,
+cross_split_annotation_md5_duplicate_pairs,0,,,
+cross_split_near_duplicate_candidates_dhash_le_6,6,,,
+cross_split_confirmed_near_duplicates_ssim_ge_0.95,0,,,

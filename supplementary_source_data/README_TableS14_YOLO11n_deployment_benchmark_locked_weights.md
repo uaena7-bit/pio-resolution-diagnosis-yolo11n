@@ -1,25 +1,19 @@
-# Table S14 — YOLO11n Locked-weight Deployment Benchmark
+# Table S14 — YOLO11n locked-weight deployment benchmark
 
-This file documents the source data for Table S14.
+This file documents the 30-repeat locked-weight deployment benchmark used for Table S14 and the deployment columns in the main manuscript.
 
 Final source-data file:
 
-`supplementary_source_data/TableS14_YOLO11n_deployment_benchmark_locked_weights.csv`
+```text
+supplementary_source_data/TableS14_YOLO11n_deployment_benchmark_locked_weights.csv
+```
+
+Protocol: validation split, batch=2, workers=0, conf=0.001, NMS IoU=0.70, max_det=1000, FP16 GPU inference, five warm-up repeats, and thirty formal repeats.
+
+The 30-repeat recheck replaces the earlier five-repeat latency summary. Median values across the 30 formal repeats are reported. Total latency is the median end-to-end time per image across formal repeats and may not equal the sum of individual stage medians because each stage median is computed independently. Peak allocated refers to the peak CUDA memory actively allocated by tensors; peak reserved refers to the peak CUDA memory reserved by the PyTorch caching allocator.
 
 Raw repeat-level log:
 
-`raw_logs/RawLog_TableS14_YOLO11n_deployment_benchmark_raw_repeats.csv`
-
-## Protocol
-
-The benchmark used validation split evaluation, batch size 2, workers=0, confidence threshold=0.001, NMS IoU=0.70, max_det=1000, GPU FP16 inference, one warm-up repeat, and five formal repeats.
-
-The weights were explicitly locked to the seed-42 YOLO11n checkpoints for 800, 960, and 1280 pixels. The 960-pixel checkpoint used the non-b2-2 directory.
-
-## Important notes
-
-Total latency is the median end-to-end time per image across five formal repeats. It may not equal the sum of individual stage medians because each stage median is computed independently over the repeat distribution.
-
-The 1280-pixel median total latency was slightly lower than the 960-pixel value in this batch-2 locked-weight benchmark. This reflects measurement variability across the five formal repeats and potential batch-processing efficiency effects rather than a systematic speed advantage of 1280 over 960.
-
-Peak memory refers to validation/inference CUDA memory, not training peak VRAM.
+```text
+raw_logs/RawLog_TableS14_YOLO11n_deployment_recheck30_raw_repeats.csv
+```

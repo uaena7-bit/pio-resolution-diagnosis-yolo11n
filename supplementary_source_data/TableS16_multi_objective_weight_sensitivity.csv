@@ -1,0 +1,9 @@
+﻿accuracy_weight_alpha_range,selected_resolution,interpretation
+0.000 <= alpha < 0.340,800,cost-prioritized objective; lowest-cost baseline selected
+0.340 <= alpha <= 0.652,960,balanced objective; intermediate resolution selected
+0.652 < alpha <= 1.000,1280,accuracy-prioritized objective; highest-accuracy setting selected
+sample alpha = 0.00,800,score800=1.000; score960=0.669; score1280=0.000
+sample alpha = 0.25,800,score800=0.750; score960=0.662; score1280=0.250
+sample alpha = 0.50,960,score800=0.500; score960=0.656; score1280=0.500
+sample alpha = 0.75,1280,score800=0.250; score960=0.649; score1280=0.750
+sample alpha = 1.00,1280,score800=0.000; score960=0.642; score1280=1.000
