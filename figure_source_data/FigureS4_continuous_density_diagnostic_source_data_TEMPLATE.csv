@@ -1,2 +1,0 @@
-image_id,filename,gt_instances,resolution_px,pred_count,abs_count_error,false_negatives,false_positives,true_positives,recall_iou50_conf025,precision_iou50_conf025,density_group
-example_id,example.jpg,354,960,350,4,10,6,344,0.9718,0.9829,ultra_high
