@@ -1,4 +1,4 @@
-﻿split,images,instances,image_ratio_percent,instance_ratio_percent,mean_instances_per_image,std_instances_per_image,min_instances_per_image,q25_instances_per_image,median_instances_per_image,q75_instances_per_image,max_instances_per_image,images_without_labels,mean_img_width,mean_img_height
+split,images,instances,image_ratio_percent,instance_ratio_percent,mean_instances_per_image,std_instances_per_image,min_instances_per_image,q25_instances_per_image,median_instances_per_image,q75_instances_per_image,max_instances_per_image,images_without_labels,mean_img_width,mean_img_height
 train,1027,225771,69.06523201075991,68.98236415633937,219.83544303797467,204.3577139082221,3.0,62.0,127.0,330.0,1151.0,0,1920.0,1080.2103213242453
 val,153,36905,10.289172831203766,11.276001564371441,241.20915032679738,99.1883278889451,30.0,206.0,265.0,308.0,414.0,0,1920.0,1080.0
 test,307,64612,20.645595158036315,19.741634279289187,210.46254071661238,113.0936092000325,1.0,137.0,187.0,274.5,602.0,0,1920.0,1080.2084690553745

@@ -1,1 +1,0 @@
-- updated Figure S2 to a unified line-chart style consistent with main-text Fig. 3; the strict diagnostic AP source values were unchanged.
