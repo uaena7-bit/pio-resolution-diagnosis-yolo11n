@@ -105,7 +105,7 @@ The original PIO and VisDrone2019-DET images are **not redistributed** in this r
 - PIO dataset: Boniche et al., *Scientific Data* 13, 801 (2026), https://doi.org/10.1038/s41597-026-07114-5
 - VisDrone2019-DET dataset: official VisDrone dataset repository, https://github.com/VisDrone/VisDrone-Dataset
 
-After authorized access to the raw images, the materials in this repository provide the split manifests, source-group metadata, hash/audit summaries, grouped definitions, source data, and scripts needed to inspect or reproduce the reported analyses.
+After obtaining the raw images from the official dataset sources, the materials in this repository provide the split manifests, source-group metadata, hash/audit summaries, grouped definitions, source data, and scripts needed to inspect or reproduce the reported analyses.
 
 ## Reproducibility workflow
 
