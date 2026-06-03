@@ -1,15 +1,18 @@
-# Python package versions used for the manuscript experiments.
-# These versions are provided to support reproducibility.
+# Python package versions recorded from the local environment used for repository verification.
+# These versions are provided to support reproducibility and may be adapted to compatible local environments.
 
 torch==2.11.0+cu128
-torchvision==0.26.0+cu128
-ultralytics==8.4.46
+torchvi
+sion==0.26.0+cu128
+ultralytic
+s==8.4.46
 numpy==2.2.6
-pandas==2.3.3
+panda
+s==2.3.3
 matplotlib==3.10.9
 Pillow==12.2.0
 opencv-python==4.13.0.92
-# scikit-image not installed in this environment
+
 scipy==1.15.3
 PyYAML==6.0.3
 tqdm==4.67.3

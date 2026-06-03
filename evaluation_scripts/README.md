@@ -2,9 +2,9 @@
 
 This directory contains scripts used to support the CSSP manuscript:
 
-Leakage-Controlled and Task-Objective-Dependent Input-Resolution Diagnosis for Dense Small-Object Detection in High-Density Visual Signals
+**Leakage-Controlled and Task-Objective-Dependent Input-Resolution Diagnosis for Dense Small-Object Detection in High-Density Visual Signals**
 
-The scripts are provided for reproducibility and traceability. Some scripts regenerate figures or tables directly from locked CSV source data. Other scripts require local access to raw PIO or VisDrone2019-DET images, labels, model weights, or prediction-output files that are not redistributed in this repository.
+The scripts are provided for reproducibility and traceability. Some scripts regenerate figures or tables directly from locked CSV source data, whereas others require local access to raw PIO or VisDrone2019-DET images, labels, model weights, or prediction-output files that are not redistributed in this repository.
 
 ## Environment
 
@@ -88,14 +88,14 @@ Examples include:
 
 ## Suggested script header
 
-Each script should begin with a short comment block such as:
+Each script should begin with a short comment block indicating:
 
-Online Resource: 4
-Manuscript item: Table S15, Table S16
-Description: Multi-objective resolution selection and weight-sensitivity scoring.
-Requires raw images: No
-Inputs: supplementary_source_data/*.csv
-Outputs: table source data or figure files
+- Online Resource number;
+- manuscript table or figure supported by the script;
+- short description;
+- whether raw images are required;
+- expected inputs;
+- expected outputs.
 
 ## Notes
 
