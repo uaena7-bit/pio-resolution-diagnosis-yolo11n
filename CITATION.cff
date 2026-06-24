@@ -6,9 +6,9 @@ authors:
   - family-names: Song
     given-names: Yanqi
 repository-code: "https://github.com/uaena7-bit/pio-resolution-diagnosis-yolo11n"
-url: "https://github.com/uaena7-bit/pio-resolution-diagnosis-yolo11n"
-version: "1.0.0"
-date-released: "2026-05-22"
+url: "https://github.com/uaena7-bit/pio-resolution-diagnosis-yolo11n/releases/tag/v1.1.0"
+version: "1.1.0"
+date-released: "2026-06-25"
 license: MIT
 keywords:
   - dense small-object detection
