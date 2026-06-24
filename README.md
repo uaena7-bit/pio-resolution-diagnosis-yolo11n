@@ -40,8 +40,8 @@ This release supports inspection or reproduction of the manuscript's reported an
 | `group_definitions/` | Scale-group and density-group definitions used for diagnostic analyses. |
 | `audit_summaries/` | PIO leakage-control summaries, near-duplicate audit outputs, image-hash manifest, and VisDrone auxiliary audit outputs. |
 | `figure_source_data/` | Locked source data for main-text figures. |
-| `main_figures/` | Final main-text figure files used in the Precision Agriculture submission. |
-| `figure_scripts/` | Python scripts used to generate manuscript figures. |
+| `main_figures/` | Final main-text figure files used in the Precision Agriculture submission, including Fig. 1–5. |
+| `figure_scripts/` | Python scripts used to generate selected manuscript and supplementary figures, including Fig. 1–4, Fig. S2, and Fig. S3 where provided. |
 | `supplementary_source_data/` | CSV source data for supplementary tables and manuscript-linked traceability tables. |
 | `supplementary_figures/` | Supplementary figure files and related source data. |
 | `bootstrap/` | Bootstrap uncertainty outputs and delta-difference analysis files. |

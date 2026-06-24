@@ -17,3 +17,8 @@ This release does not change the experimental results, split definitions, model 
 ## Recommended citation
 
 Use this release together with the manuscript-linked commit hash reported in the README.
+
+## Additional figure traceability update
+
+- Added final Precision Agriculture-style figure files and generation scripts for Fig. 2, Fig. 3, Fig. 4, Fig. S2, and Fig. S3.
+- Added source-data CSV files used by the regenerated Fig. 2, Fig. 3, Fig. 4, Fig. S2, and Fig. S3 scripts.
