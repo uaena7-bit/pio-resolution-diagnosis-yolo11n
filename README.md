@@ -1,18 +1,18 @@
 # Leakage-Controlled and Task-Objective-Dependent Input-Resolution Diagnosis for Dense Small-Object Detection
 
-This repository provides the reproducibility materials for the CSSP manuscript:
+This repository provides the reproducibility materials for the submitted Precision Agriculture manuscript:
 
-**Leakage-Controlled and Task-Objective-Dependent Input-Resolution Diagnosis for Dense Small-Object Detection in High-Density Visual Signals**
+**Leakage-Controlled and Task-Objective-Dependent Input-Resolution Diagnosis for Dense Small-Object Detection in High-Density Broiler-House Monitoring**
 
 The contribution is a reproducible **decision framework** for leakage-controlled input-resolution evaluation, scale-density-counting-deployment diagnosis, and task-objective-dependent resolution selection. It is not a new detector architecture, and it does not claim that any single input size is universally optimal.
 
 ## Version cited by the manuscript
 
-The manuscript cites the archived reproducibility release:
+The submitted Precision Agriculture manuscript cites the archived reproducibility release:
 
 - Repository: `uaena7-bit/pio-resolution-diagnosis-yolo11n`
-- Release: `v1.0.0 - CSSP reproducibility materials`
-- Manuscript-linked commit: `bcb0cff`
+- Release: `v1.1.0 - Precision Agriculture submission materials`
+- Manuscript-linked commit: `<TO_BE_FILLED_AFTER_COMMIT>`
 
 For exact reproduction of the submitted manuscript, use the archived release and commit cited above. The `main` branch may contain later documentation-only updates.
 
@@ -40,6 +40,8 @@ This release supports inspection or reproduction of the manuscript's reported an
 | `group_definitions/` | Scale-group and density-group definitions used for diagnostic analyses. |
 | `audit_summaries/` | PIO leakage-control summaries, near-duplicate audit outputs, image-hash manifest, and VisDrone auxiliary audit outputs. |
 | `figure_source_data/` | Locked source data for main-text figures. |
+| `main_figures/` | Final main-text figure files used in the Precision Agriculture submission. |
+| `figure_scripts/` | Python scripts used to generate manuscript figures. |
 | `supplementary_source_data/` | CSV source data for supplementary tables and manuscript-linked traceability tables. |
 | `supplementary_figures/` | Supplementary figure files and related source data. |
 | `bootstrap/` | Bootstrap uncertainty outputs and delta-difference analysis files. |
@@ -71,7 +73,7 @@ The final manuscript no longer repeats the seed-repeatability table in the Suppl
 | Online Resource 1 | Cross-split leakage audit, near-duplicate audit, component-level split diagnostics, and dataset split statistics | `audit_summaries/`, `split_manifest/`, `group_definitions/` |
 | Online Resource 2 | Maximum-detection sensitivity, strict diagnostic AP, and TP/FN/FP summaries | `supplementary_source_data/TableS4*` to `TableS7*`, `supplementary_figures/` |
 | Online Resource 3 | Counting calibration and confidence-threshold sensitivity | `counting_calibration/`, `supplementary_source_data/TableS8*` to `TableS10*` |
-| Online Resource 4 | Seed repeatability source data, cross-detector robustness, deployment benchmarking, multi-objective selection, weight sensitivity, VisDrone protocol-transfer demonstration, and qualitative examples | `supplementary_source_data/TableS11*`, `TableS13*` to `TableS17*`, `raw_logs/`, `evaluation_scripts/`, `figure_source_data/` |
+| Online Resource 4 | Seed repeatability source data, cross-detector robustness, deployment benchmarking, multi-objective selection, weight sensitivity, VisDrone protocol-transfer demonstration, and qualitative examples | `supplementary_source_data/TableS11*`, `TableS13*` to `TableS17*`, `raw_logs/`, `evaluation_scripts/`, `figure_source_data/`, `main_figures/`, `figure_scripts/` |
 | Online Resource 5 | Bootstrap uncertainty and delta-difference analysis | `bootstrap/`, `supplementary_source_data/TableS12_bootstrap_delta_difference.csv` |
 
 ## Interpretation notes
@@ -111,7 +113,7 @@ After obtaining the raw images from the official dataset sources, the materials 
 
 A typical reproduction workflow is:
 
-1. Check out the manuscript-linked release `v1.0.0` and commit `bcb0cff`.
+1. Check out the manuscript-linked release `v1.1.0` and the manuscript-linked commit reported above.
 2. Install the Python environment required by the relevant scripts. See `evaluation_scripts/README.md` and each script header for details.
 3. Obtain the raw PIO and, where needed, VisDrone2019-DET images from their original sources.
 4. Arrange local image and label paths according to the split manifests and script arguments.
@@ -130,7 +132,7 @@ If you use these materials, please cite the manuscript and this repository relea
 
 Repository release citation:
 
-Song, Y. Leakage-Controlled and Task-Objective-Dependent Input-Resolution Diagnosis for Dense Small-Object Detection in High-Density Visual Signals. GitHub repository release v1.0.0, commit bcb0cff. 2026.
+Song, Y. Leakage-Controlled and Task-Objective-Dependent Input-Resolution Diagnosis for Dense Small-Object Detection in High-Density Broiler-House Monitoring. GitHub repository release v1.1.0 - Precision Agriculture submission materials. 2026.
 
 Please also cite the original datasets and third-party software used in any reproduced experiments, including the PIO dataset paper, the VisDrone dataset paper/source, and Ultralytics YOLO where applicable.
 
