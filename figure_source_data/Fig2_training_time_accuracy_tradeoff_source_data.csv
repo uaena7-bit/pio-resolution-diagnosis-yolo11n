@@ -1,0 +1,4 @@
+input_resolution_px,training_time_h,test_mAP50_95
+800,4.48,0.7199
+960,7.29,0.742
+1280,22.54,0.7543

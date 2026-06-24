@@ -1,0 +1,102 @@
+{
+  "script": "09_make_final_paper_figure5_springer600_METRIC025_HIRES_v2.py",
+  "split": "test",
+  "metric_conf": 0.25,
+  "draw_conf": 0.5,
+  "draw_gt": 1,
+  "max_draw": 120,
+  "panel_target_w": 1365,
+  "dpi": 600,
+  "target_full_width_mm": 174.0,
+  "estimated_full_width_mm": 174.70966666666664,
+  "min_canvas_width_px": 4110,
+  "output_info": {
+    "canvas_width_px": 4127,
+    "canvas_height_px": 3270,
+    "dpi": 600,
+    "estimated_width_mm": 174.70966666666664,
+    "png_path": "D:\\Broiler chicken detection dataset\\05_PAPER\\figures\\Fig5_qualitative_resolution_comparison_springer600_METRIC025_HIRES_v2.png",
+    "tif_path": "D:\\Broiler chicken detection dataset\\05_PAPER\\figures\\Fig5_qualitative_resolution_comparison_springer600_METRIC025_HIRES_v2.tif",
+    "pdf_path": "D:\\Broiler chicken detection dataset\\05_PAPER\\figures\\Fig5_qualitative_resolution_comparison_springer600_METRIC025_HIRES_v2.pdf"
+  },
+  "output_figure": "D:\\Broiler chicken detection dataset\\05_PAPER\\figures\\Fig5_qualitative_resolution_comparison_springer600_METRIC025_HIRES_v2.png",
+  "rows": [
+    {
+      "row_name": "Case A",
+      "filename": "val__C-W2-V0007.jpg",
+      "image_id": "D:\\Broiler chicken detection dataset\\00_DATASET\\PIO-GRDB-MD5-7_1_2\\images\\test\\val__C-W2-V0007.jpg",
+      "display_title": "Case A: 960 markedly reduces missed detections in an ultra-high-density scene",
+      "density_group": "ultra_high",
+      "num_instances": 571,
+      "800": {
+        "TP": 545,
+        "FN": 26,
+        "FP": 46
+      },
+      "960": {
+        "TP": 559,
+        "FN": 12,
+        "FP": 52
+      },
+      "1280": {
+        "TP": 554,
+        "FN": 17,
+        "FP": 43
+      }
+    },
+    {
+      "row_name": "Case B",
+      "filename": "train__K-513.jpg",
+      "image_id": "D:\\Broiler chicken detection dataset\\00_DATASET\\PIO-GRDB-MD5-7_1_2\\images\\test\\train__K-513.jpg",
+      "display_title": "Case B: 960 and 1280 produce nearly identical detections",
+      "density_group": "ultra_high",
+      "num_instances": 602,
+      "800": {
+        "TP": 568,
+        "FN": 34,
+        "FP": 84
+      },
+      "960": {
+        "TP": 578,
+        "FN": 24,
+        "FP": 74
+      },
+      "1280": {
+        "TP": 579,
+        "FN": 23,
+        "FP": 70
+      }
+    },
+    {
+      "row_name": "Case C",
+      "filename": "val__C-W2-V0036.jpg",
+      "image_id": "D:\\Broiler chicken detection dataset\\00_DATASET\\PIO-GRDB-MD5-7_1_2\\images\\test\\val__C-W2-V0036.jpg",
+      "display_title": "Case C: 960 improves substantially over 800, while 1280 is only marginally better",
+      "density_group": "ultra_high",
+      "num_instances": 489,
+      "800": {
+        "TP": 456,
+        "FN": 33,
+        "FP": 40
+      },
+      "960": {
+        "TP": 468,
+        "FN": 21,
+        "FP": 40
+      },
+      "1280": {
+        "TP": 469,
+        "FN": 20,
+        "FP": 22
+      }
+    }
+  ],
+  "notes": [
+    "This figure is a fixed three-image paper figure.",
+    "TP/FN/FP values shown inside panels are computed at metric_conf=0.25 and IoU=0.50 by default, matching the manuscript caption.",
+    "Prediction boxes displayed in the figure are filtered at draw_conf=0.50 by default for readability, matching the manuscript caption.",
+    "GT boxes are yellow; predicted boxes are cyan.",
+    "Rows 1 and 3 emphasize the practical benefit of 960 over 800.",
+    "Row 2 emphasizes the limited marginal gain of 1280 over 960."
+  ]
+}
