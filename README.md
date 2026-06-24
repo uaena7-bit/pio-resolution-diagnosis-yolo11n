@@ -12,7 +12,7 @@ The submitted Precision Agriculture manuscript cites the archived reproducibilit
 
 - Repository: `uaena7-bit/pio-resolution-diagnosis-yolo11n`
 - Release: `v1.1.0 - Precision Agriculture submission materials`
-- Manuscript-linked commit: `<TO_BE_FILLED_AFTER_COMMIT>`
+- Archived version: GitHub release tag `v1.1.0`
 
 For exact reproduction of the submitted manuscript, use the archived release and commit cited above. The `main` branch may contain later documentation-only updates.
 
@@ -113,7 +113,7 @@ After obtaining the raw images from the official dataset sources, the materials 
 
 A typical reproduction workflow is:
 
-1. Check out the manuscript-linked release `v1.1.0` and the manuscript-linked commit reported above.
+1. Check out the archived GitHub release tag `v1.1.0`.
 2. Install the Python environment required by the relevant scripts. See `evaluation_scripts/README.md` and each script header for details.
 3. Obtain the raw PIO and, where needed, VisDrone2019-DET images from their original sources.
 4. Arrange local image and label paths according to the split manifests and script arguments.
