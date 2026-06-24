@@ -1,4 +1,4 @@
-﻿
+
 # -*- coding: utf-8 -*-
 """
 make_fig1_precision_agriculture_v23_final_refined.py
@@ -294,7 +294,7 @@ def compose(out_dir: Path, stem: str):
                 pil_kwargs={"compression": "tiff_lzw"})
     plt.close(fig)
 
-    print("[Fig1 PA v25 final refined] saved:")
+    print("[Fig1 resolution diagnosis workflow] saved:")
     print(pdf)
     print(svg)
     print(png)
@@ -303,7 +303,7 @@ def compose(out_dir: Path, stem: str):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--out_dir", type=str, default=str(default_output_dir()))
-    parser.add_argument("--stem", type=str, default="Fig1_precision_agriculture_v25_final")
+    parser.add_argument("--stem", type=str, default="Fig1_resolution_diagnosis_workflow")
     args = parser.parse_args()
     compose(Path(args.out_dir), args.stem)
 
