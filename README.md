@@ -139,3 +139,8 @@ Please also cite the original datasets and third-party software used in any repr
 ## License
 
 The repository's own scripts, source-data files, and documentation are released under the MIT License unless otherwise stated. Third-party datasets, Ultralytics software/models, and any locally downloaded detector weights are governed by their own licenses and terms of use.
+
+
+## Revision update: counting sensitivity and threshold robustness
+
+This update adds Tables S18 and S19 for validation-source-component sensitivity and counting-threshold robustness. Source CSV files are provided in supplementary_source_data/, and reproduction scripts are provided in scripts/revision_experiments/.
