@@ -10,4 +10,4 @@ Main changes:
 - Added four-resolution threshold-robustness tables.
 - Added the final visualization script used to generate Fig. S3.
 
-The 1024 px setting is used only for the supplementary sensitivity analysis. The primary resolution-selection interpretation remains based on the predefined 800, 960, and 1280 px comparison.
+The 1024 px setting is used only for supplementary sensitivity analysis. The primary resolution-selection interpretation remains based on the predefined 800, 960, and 1280 px comparison.

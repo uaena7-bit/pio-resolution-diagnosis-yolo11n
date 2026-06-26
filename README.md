@@ -1,6 +1,6 @@
 ﻿# Leakage-Controlled and Task-Objective-Dependent Input-Resolution Diagnosis for Dense Small-Object Detection
 
-This repository provides the reproducibility materials for the submitted Precision Agriculture manuscript:
+This repository provides the reproducibility materials for the submission-ready Precision Agriculture manuscript:
 
 **Leakage-Controlled and Task-Objective-Dependent Input-Resolution Diagnosis for Dense Small-Object Detection in High-Density Broiler-House Monitoring**
 
@@ -8,10 +8,10 @@ The contribution is a reproducible **decision framework** for leakage-controlled
 
 ## Version cited by the manuscript
 
-The submitted Precision Agriculture manuscript cites the archived reproducibility release:
+The submission-ready Precision Agriculture manuscript cites the archived reproducibility release:
 
 - Repository: `uaena7-bit/pio-resolution-diagnosis-yolo11n`
-- Release: `v1.1.0 - Precision Agriculture submission materials`
+- Release: `v1.1.0 - Precision Agriculture submission-ready materials`
 - Archived version: GitHub release tag `v1.1.0`
 
 For exact reproduction of the submission-ready manuscript, use the archived release and commit cited above. The `main` branch may contain later documentation-only updates.
@@ -132,7 +132,7 @@ If you use these materials, please cite the manuscript and this repository relea
 
 Repository release citation:
 
-Song, Y. Leakage-Controlled and Task-Objective-Dependent Input-Resolution Diagnosis for Dense Small-Object Detection in High-Density Broiler-House Monitoring. GitHub repository release v1.1.0 - Precision Agriculture submission materials. 2026.
+Song, Y. Leakage-Controlled and Task-Objective-Dependent Input-Resolution Diagnosis for Dense Small-Object Detection in High-Density Broiler-House Monitoring. GitHub repository release v1.1.0 - Precision Agriculture submission-ready materials. 2026.
 
 Please also cite the original datasets and third-party software used in any reproduced experiments, including the PIO dataset paper, the VisDrone dataset paper/source, and Ultralytics YOLO where applicable.
 
@@ -144,4 +144,5 @@ The repository's own scripts, source-data files, and documentation are released 
 ## Revision update: counting sensitivity and threshold robustness
 
 This update adds Tables S18 and S19 for validation-source-component sensitivity and counting-threshold robustness. Source CSV files are provided in supplementary_source_data/, and reproduction scripts are provided in scripts/revision_experiments/.
+
 
