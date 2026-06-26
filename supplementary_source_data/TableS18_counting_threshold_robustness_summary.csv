@@ -1,0 +1,13 @@
+﻿resolution,protocol,selection_split,selected_conf,note,images,gt_total,pred_total,MAE,RMSE,MAPE_percent,Bias_pred_minus_gt,Relative_total_error_percent
+800,fixed_conf_0.25,none_fixed,0.25,Fixed threshold; diagnostic/visualization-aligned setting,307,64612,72491,26.074918566775246,34.42912750632676,13.724387383818613,25.664495114006513,12.194329226769021
+800,validation_calibrated,validation,0.45,Formal counting protocol; threshold selected on validation and applied to test,307,64612,64735,12.302931596091206,18.30531864114214,7.332650772371251,0.4006514657980456,0.1903671144679007
+800,test_diagnostic_best,test,0.45,Diagnostic only; threshold selected directly on test set,307,64612,64735,12.302931596091206,18.30531864114214,7.332650772371251,0.4006514657980456,0.1903671144679007
+960,fixed_conf_0.25,none_fixed,0.25,Fixed threshold; diagnostic/visualization-aligned setting,307,64612,71759,24.55700325732899,32.45789053497556,12.940698327707128,23.28013029315961,11.061412740667368
+960,validation_calibrated,validation,0.5,Formal counting protocol; threshold selected on validation and applied to test,307,64612,62333,15.716612377850163,22.258548846289845,8.792443058896605,-7.423452768729642,-3.5272085680678513
+960,test_diagnostic_best,test,0.4,Diagnostic only; threshold selected directly on test set,307,64612,66096,13.309446254071661,19.63942057166859,8.174471767270216,4.833876221498372,2.29678697455581
+1024,fixed_conf_0.25,none_fixed,0.25,Fixed threshold; diagnostic/visualization-aligned setting,307,64612,71748,24.0,32.823285609090014,12.807294893955515,23.2442996742671,11.04438803937349
+1024,validation_calibrated,validation,0.5,Formal counting protocol; threshold selected on validation and applied to test,307,64612,63046,15.042345276872965,21.056926100640084,8.58956481010426,-5.100977198697068,-2.423698384201077
+1024,test_diagnostic_best,test,0.4,Diagnostic only; threshold selected directly on test set,307,64612,66521,13.488599348534201,20.501132089182555,8.184709931292081,6.2182410423452765,2.954559524546524
+1280,fixed_conf_0.25,none_fixed,0.25,Fixed threshold; diagnostic/visualization-aligned setting,307,64612,70822,21.23127035830619,30.07222576090742,11.407424096169734,20.22801302931596,9.611217730452548
+1280,validation_calibrated,validation,0.5,Formal counting protocol; threshold selected on validation and applied to test,307,64612,63215,14.009771986970684,20.486350425244815,7.98218188679663,-4.550488599348534,-2.162137064322417
+1280,test_diagnostic_best,test,0.4,Diagnostic only; threshold selected directly on test set,307,64612,66264,12.703583061889251,19.616518997762487,7.58804244622954,5.381107491856677,2.556800594316845

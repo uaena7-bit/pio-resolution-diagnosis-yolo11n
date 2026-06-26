@@ -1,4 +1,4 @@
-# Leakage-Controlled and Task-Objective-Dependent Input-Resolution Diagnosis for Dense Small-Object Detection
+﻿# Leakage-Controlled and Task-Objective-Dependent Input-Resolution Diagnosis for Dense Small-Object Detection
 
 This repository provides the reproducibility materials for the submitted Precision Agriculture manuscript:
 
@@ -14,7 +14,7 @@ The submitted Precision Agriculture manuscript cites the archived reproducibilit
 - Release: `v1.1.0 - Precision Agriculture submission materials`
 - Archived version: GitHub release tag `v1.1.0`
 
-For exact reproduction of the submitted manuscript, use the archived release and commit cited above. The `main` branch may contain later documentation-only updates.
+For exact reproduction of the submission-ready manuscript, use the archived release and commit cited above. The `main` branch may contain later documentation-only updates.
 
 ## What this repository supports
 
@@ -40,8 +40,8 @@ This release supports inspection or reproduction of the manuscript's reported an
 | `group_definitions/` | Scale-group and density-group definitions used for diagnostic analyses. |
 | `audit_summaries/` | PIO leakage-control summaries, near-duplicate audit outputs, image-hash manifest, and VisDrone auxiliary audit outputs. |
 | `figure_source_data/` | Locked source data for main-text figures. |
-| `main_figures/` | Final main-text figure files used in the Precision Agriculture submission, including Fig. 1–5. |
-| `figure_scripts/` | Python scripts used to generate selected manuscript and supplementary figures, including Fig. 1–4, Fig. S2, and Fig. S3 where provided. |
+| `main_figures/` | Final main-text figure files used in the Precision Agriculture submission, including Fig. 1鈥?. |
+| `figure_scripts/` | Python scripts used to generate selected manuscript and supplementary figures, including Fig. 1鈥?, Fig. S2, and Fig. S3 where provided. |
 | `supplementary_source_data/` | CSV source data for supplementary tables and manuscript-linked traceability tables. |
 | `supplementary_figures/` | Supplementary figure files and related source data. |
 | `bootstrap/` | Bootstrap uncertainty outputs and delta-difference analysis files. |
@@ -144,3 +144,4 @@ The repository's own scripts, source-data files, and documentation are released 
 ## Revision update: counting sensitivity and threshold robustness
 
 This update adds Tables S18 and S19 for validation-source-component sensitivity and counting-threshold robustness. Source CSV files are provided in supplementary_source_data/, and reproduction scripts are provided in scripts/revision_experiments/.
+
