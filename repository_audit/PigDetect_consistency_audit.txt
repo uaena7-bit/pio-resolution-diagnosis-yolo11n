@@ -1,4 +1,4 @@
-PigDetect manuscript consistency audit
+﻿PigDetect manuscript consistency audit
 =======================================
 
 Locked dataset:
@@ -26,5 +26,5 @@ Cross-document checks:
 - Supplementary Tables S17a-S17g retain higher precision where appropriate.
 - Methods explicitly states single-seed PigDetect external-validation role.
 - Discussion explicitly distinguishes test-image bootstrap uncertainty from training-seed uncertainty.
-- All VisDrone content was removed from the revised main manuscript and supplementary material.
+- The revised main manuscript and supplementary material are aligned with the PIO and PigDetect study design.
 - Fig. 6 artwork was not changed; a placement marker and locked-protocol caption were inserted because the exact locked artwork file was not present in the active document package.

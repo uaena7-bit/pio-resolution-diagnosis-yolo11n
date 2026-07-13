@@ -1,25 +1,29 @@
-# v1.2.0 - PigDetect external-validation update
+﻿# v1.2.0 — PIO and PigDetect reproducibility release
 
-This release aligns the reproducibility repository with the revised Precision Agriculture manuscript and its supplementary material.
+This release provides the reproducibility materials for leakage-controlled
+and deployment-aware input-resolution diagnosis in dense broiler detection.
 
-## Main changes
+The repository contains the primary PIO experiments and independent
+livestock-domain external validation on the leakage-cleaned PigDetect dataset.
 
-- Replaced the active VisDrone external sanity-check materials with an independent livestock-domain validation on PigDetect.
-- Added the PigDetect clean-split audit and source-to-manuscript traceability records.
-- Added source CSV files for Tables S17a-S17g and the rounded main-manuscript Table 12.
-- Added the locked PigDetect Fig. 6 artwork and its protocol metadata.
-- Updated the repository README to emphasize the dense livestock-monitoring application, the PIO/PigDetect dataset roles, and the rationale for the 800/960/1280 primary operating points.
-- Removed repeated defensive wording about detector novelty and universal resolution claims from the active repository description.
-- Retained PIO as the primary dataset with multi-seed repeatability, counting calibration, cross-detector analysis, and multi-objective selection.
+## Included materials
 
-## Experimental results
+- Leakage-controlled PIO split and audit materials
+- YOLO11n experiments at 800, 960, and 1280 pixels
+- Three-seed repeatability analysis on PIO
+- PigDetect clean-split leakage audit
+- PigDetect external-validation results
+- Scale- and density-stratified analyses
+- Paired image-level bootstrap uncertainty summaries
+- Counting-calibration source data
+- Locked-weight deployment benchmarks
+- Main and supplementary figure source data
+- Source-to-table and source-to-manuscript traceability files
 
-This release does not alter the locked PIO results. PigDetect results are added as the manuscript-linked external-validation evidence. PigDetect uses a fixed seed for external validation; the dedicated training-seed repeatability evidence remains the three-seed PIO experiment.
+## Validation status
 
-## Data redistribution
+The repository source data, manuscript summary values, qualitative evidence,
+and deployment results were checked for numerical and file-level alignment.
 
-Raw PIO and PigDetect images, trained checkpoints, and prediction caches are not redistributed. Users must obtain the datasets from their original sources.
-
-## Versioning
-
-The previous `v1.1.0` release remains an archived record of the earlier manuscript configuration. The revised manuscript should cite `v1.2.0`.
+The primary PIO experiments remain unchanged. PigDetect provides the independent
+livestock-domain external-validation evidence used in the revised manuscript.

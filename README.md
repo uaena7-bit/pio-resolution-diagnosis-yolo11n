@@ -1,4 +1,4 @@
-# Leakage-controlled and deployment-aware input-resolution selection for dense broiler detection
+﻿# Leakage-controlled and deployment-aware input-resolution selection for dense broiler detection
 
 This repository contains the manuscript-linked reproducibility materials for:
 
@@ -81,7 +81,7 @@ The repository license applies only to files authored and released in this repos
 
 ## Release alignment
 
-Release `v1.2.0` replaces the active VisDrone protocol-transfer materials with the manuscript-linked PigDetect livestock-domain external validation. Historical releases remain available through Git history and their archived tags.
+Release `v1.2.0` provides the manuscript-linked PIO primary experiments and independent livestock-domain external validation on the PigDetect dataset.
 
 ## Citation
 
@@ -90,3 +90,4 @@ Please cite the manuscript and the manuscript-linked repository release:
 > Song, Y. *Leakage-controlled and deployment-aware input-resolution selection for dense broiler detection in precision poultry monitoring*. GitHub repository release v1.2.0, 2026.
 
 Repository: `uaena7-bit/pio-resolution-diagnosis-yolo11n`
+

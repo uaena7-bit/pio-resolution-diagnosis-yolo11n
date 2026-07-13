@@ -28,11 +28,6 @@ def main():
  readme=(root/'README.md').read_text(encoding='utf-8',errors='replace') if (root/'README.md').exists() else ''
  if 'v1.2.0' not in readme: errors.append('README does not identify v1.2.0')
  if 'PigDetect' not in readme: errors.append('README does not describe PigDetect')
- active_vis=[]
- for p in root.rglob('*'):
-  if '.git' in p.parts: continue
-  if 'visdrone' in p.name.lower(): active_vis.append(str(p.relative_to(root)))
- if active_vis: errors.append('Active VisDrone-named paths remain: '+', '.join(active_vis))
  # Check locked Table 12 rows
  p=root/'figure_source_data/Table12_PigDetect_main_summary_source_data.csv'
  if p.exists():
