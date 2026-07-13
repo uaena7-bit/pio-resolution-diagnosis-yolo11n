@@ -1,0 +1,27 @@
+{
+  "figure": "Fig. 6",
+  "title": "PigDetect qualitative evidence across input resolutions",
+  "source_artwork": "FigX_PigDetect_evidence_fig5_style(3).pdf",
+  "layout": "3 rows x 4 columns",
+  "columns": [
+    "Scene overview",
+    "800 px",
+    "960 px",
+    "1280 px"
+  ],
+  "rows": [
+    "Tiny-object benefit",
+    "Crowded-scene benefit",
+    "Comparable 960/1280"
+  ],
+  "display_prediction_threshold": 0.5,
+  "local_diagnostic_threshold": 0.25,
+  "local_diagnostic_iou": 0.5,
+  "legend": {
+    "ground_truth": "yellow",
+    "prediction": "cyan",
+    "crop": "red"
+  },
+  "note": "Local crop AP50-95 and FN/FP annotations illustrate selected cases and do not replace the formal untouched-test metrics.",
+  "artwork_status": "locked"
+}

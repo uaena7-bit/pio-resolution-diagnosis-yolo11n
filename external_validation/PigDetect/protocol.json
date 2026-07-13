@@ -1,0 +1,66 @@
+{
+  "dataset": "PigDetect",
+  "role": "independent livestock-domain external validation",
+  "dataset_doi": "10.25625/I6UYE9",
+  "clean_split": {
+    "train_images": 2431,
+    "validation_images": 241,
+    "test_images": 250,
+    "test_instances": 5436
+  },
+  "pre_clean_audit": {
+    "train_validation_ssim_confirmed_pairs": 18,
+    "affected_validation_images": 9
+  },
+  "post_clean_cross_split_overlaps": {
+    "filename": 0,
+    "filename_stem": 0,
+    "image_md5": 0,
+    "label_md5": 0,
+    "ssim_confirmed": 0
+  },
+  "training": {
+    "model": "YOLO11n",
+    "resolutions": [
+      800,
+      960,
+      1280
+    ],
+    "seed": 42,
+    "batch_size": 2,
+    "optimizer": "SGD",
+    "max_epochs": 300,
+    "patience": 50,
+    "checkpoint_selection": "validation-based best.pt"
+  },
+  "test": {
+    "confidence": 0.001,
+    "nms_iou": 0.7,
+    "max_det": 1000,
+    "batch_size": 2,
+    "workers": 0,
+    "tta": false,
+    "precision": "FP32"
+  },
+  "bootstrap": {
+    "unit": "image",
+    "paired": true,
+    "replicates": 1000,
+    "interval": "percentile 95% CI"
+  },
+  "deployment": {
+    "split": "validation",
+    "precision": "FP16",
+    "batch_size": 2,
+    "warmup_repeats": 5,
+    "formal_repeats": 30,
+    "hardware": "NVIDIA GeForce RTX 5060 Laptop GPU"
+  },
+  "qualitative_figure": {
+    "manuscript_id": "Fig. 6",
+    "display_confidence": 0.5,
+    "diagnostic_confidence": 0.25,
+    "diagnostic_iou": 0.5,
+    "artwork_locked": true
+  }
+}

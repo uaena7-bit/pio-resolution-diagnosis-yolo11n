@@ -1,0 +1,9 @@
+﻿Evidence block,Primary source artifacts,Main manuscript destination,Supplementary destination,Consistency status
+Dataset and leakage audit,clean split manifest; audit summary,Methods; data availability,Table S17a,Checked/locked
+Training configuration,training scripts; experiment metadata; results.csv,Methods,Table S17b,Checked/locked
+Locked test metrics,best.pt test evaluation outputs,Table 12; Results,Table S17b,Checked/locked
+Paired bootstrap,bootstrap_delta_summary.csv; bootstrap_summary.json,Table 12; Results; Discussion,Table S17e,Checked/locked
+Scale analysis,scale_group_counts.csv; scale_metrics_wide.csv,Results,Table S17c,Checked/locked
+Density analysis,density_thresholds.json; density_group_counts.csv; density_metrics_wide.csv,Results,Table S17d,Checked/locked
+Deployment benchmark,30-repeat summary and raw-repeat logs,Table 12; Results,Table S17f,Checked/locked
+Qualitative evidence,"locked Fig. 6 metrics, crop diagnostics, and metadata",Fig. 6 and caption,Source record only,Artwork locked

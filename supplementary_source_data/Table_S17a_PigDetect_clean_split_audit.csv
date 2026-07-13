@@ -1,0 +1,8 @@
+Item,Train,Validation,Test,Cross-split result
+Images after cleaning,2431,241,250,"2,922 total"
+Annotated test instances,,,5436,
+Filename overlap,,,,0
+Filename-stem overlap,,,,0
+Image-MD5 overlap,,,,0
+Label-MD5 overlap,,,,0
+SSIM-confirmed near duplicates,,,,0

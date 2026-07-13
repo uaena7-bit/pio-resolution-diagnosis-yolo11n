@@ -1,0 +1,11 @@
+Audit stage,Check,Result,Details
+Original split,SSIM-confirmed train-validation near-duplicate pairs,18,Pairs involved 9 validation images
+Clean split,Train images,2431,
+Clean split,Validation images,241,
+Clean split,Test images,250,
+Clean split,Test instances,5436,
+Post-clean audit,Filename overlap,0,
+Post-clean audit,Filename-stem overlap,0,
+Post-clean audit,Image-MD5 overlap,0,
+Post-clean audit,Label-MD5 overlap,0,
+Post-clean audit,SSIM-confirmed cross-split near duplicates,0,

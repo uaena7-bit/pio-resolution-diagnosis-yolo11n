@@ -1,148 +1,92 @@
-﻿# Leakage-Controlled and Task-Objective-Dependent Input-Resolution Diagnosis for Dense Small-Object Detection
+# Leakage-controlled and deployment-aware input-resolution selection for dense broiler detection
 
-This repository provides the reproducibility materials for the submission-ready Precision Agriculture manuscript:
+This repository contains the manuscript-linked reproducibility materials for:
 
-**Leakage-Controlled and Task-Objective-Dependent Input-Resolution Diagnosis for Dense Small-Object Detection in High-Density Broiler-House Monitoring**
+**Leakage-controlled and deployment-aware input-resolution selection for dense broiler detection in precision poultry monitoring**
 
-The contribution is a reproducible **decision framework** for leakage-controlled input-resolution evaluation, scale-density-counting-deployment diagnosis, and task-objective-dependent resolution selection. It is not a new detector architecture, and it does not claim that any single input size is universally optimal.
+**Manuscript-linked release:** `v1.2.0 - PigDetect external-validation update`
 
-## Version cited by the manuscript
+## Study scope
 
-The submission-ready Precision Agriculture manuscript cites the archived reproducibility release:
+The study treats input resolution as an application and deployment design variable for dense livestock monitoring. PIO is the primary dense broiler case study. PigDetect provides independent livestock-domain external validation after split-leakage auditing and cleaning.
 
-- Repository: `uaena7-bit/pio-resolution-diagnosis-yolo11n`
-- Release: `v1.1.0 - Precision Agriculture submission-ready materials`
-- Archived version: GitHub release tag `v1.1.0`
+The repository supports four connected parts of the study:
 
-For exact reproduction of the submission-ready manuscript, use the archived release and commit cited above. The `main` branch may contain later documentation-only updates.
+1. leakage-controlled dataset construction and audit;
+2. resolution-dependent detection, scale, density, and counting diagnosis;
+3. bootstrap uncertainty and repeated deployment benchmarking;
+4. task-oriented resolution selection with an independent livestock-domain validation.
 
-## What this repository supports
+## Primary operating points
 
-This release supports inspection or reproduction of the manuscript's reported analyses, including:
+The prespecified primary comparison uses 800, 960, and 1280 pixels as low-, intermediate-, and high-compute operating points. The 1024-pixel PIO run is retained as a targeted sensitivity check around the intermediate-to-high region and is not part of the full primary experiment matrix.
 
-- leakage-controlled PIO split manifests and leakage-audit summaries;
-- source-group / source-component diagnostics for split transparency;
-- scale and density group definitions used for diagnostic AP analyses;
-- source data and scripts for main-text figures and selected tables;
-- bootstrap uncertainty outputs and delta-difference analyses;
-- counting-threshold calibration and confidence-sweep source data;
-- YOLO11n seed-repeatability source data across 800, 960, and 1280 px;
-- YOLOv8n cross-detector robustness-check source data;
-- 30-repeat locked-weight YOLO11n deployment benchmark source data and raw repeat logs;
-- multi-objective resolution-selection and weight-sensitivity source data;
-- VisDrone2019-DET directional protocol-transfer source data and duplicate-audit summaries.
+## Dataset roles
 
-## Repository contents
+### PIO
 
-| Directory / file | Purpose |
+PIO is the main dense poultry-monitoring dataset. Its materials include the grouped leakage-controlled split, multi-seed YOLO11n repeatability, scale and density analyses, counting calibration, paired bootstrap analysis, deployment benchmarking, cross-detector check, and multi-objective selection analyses.
+
+### PigDetect
+
+PigDetect is the independent livestock-domain external-validation dataset. The cleaned split contains 2,431 training images, 241 validation images, and 250 test images with 5,436 test instances. The original audit found 18 SSIM-confirmed train-validation near-duplicate pairs involving 9 validation images; after cleaning, the filename, filename-stem, image-MD5, label-MD5, and SSIM-confirmed cross-split checks were all zero.
+
+PigDetect source data cover locked test performance, scale and density stratification, 1,000-replicate paired image-level bootstrap analysis, repeated locked-weight deployment benchmarking, and the locked Fig. 6 qualitative evidence.
+
+## Repository layout
+
+| Path | Contents |
 |---|---|
-| `split_manifest/` | Fixed leakage-controlled train/validation/test split manifests for the PIO case study. |
-| `group_definitions/` | Scale-group and density-group definitions used for diagnostic analyses. |
-| `audit_summaries/` | PIO leakage-control summaries, near-duplicate audit outputs, image-hash manifest, and VisDrone auxiliary audit outputs. |
-| `figure_source_data/` | Locked source data for main-text figures. |
-| `main_figures/` | Final main-text figure files used in the Precision Agriculture submission, including Fig. 1鈥?. |
-| `figure_scripts/` | Python scripts used to generate selected manuscript and supplementary figures, including Fig. 1鈥?, Fig. S2, and Fig. S3 where provided. |
-| `supplementary_source_data/` | CSV source data for supplementary tables and manuscript-linked traceability tables. |
-| `supplementary_figures/` | Supplementary figure files and related source data. |
-| `bootstrap/` | Bootstrap uncertainty outputs and delta-difference analysis files. |
-| `counting_calibration/` | Counting-threshold calibration and confidence-sweep outputs. |
-| `evaluation_scripts/` | Reproduction scripts for split construction, figure generation, table-source-data preparation, deployment benchmarking, and VisDrone conversion/audit. |
-| `raw_logs/` | Traceability logs retained separately from cleaned table source data. |
-| `CITATION.cff` | Repository citation metadata. |
-| `LICENSE` | License for this repository's own source files, unless otherwise stated. |
+| `split_manifest/` | PIO leakage-controlled split manifests and statistics. |
+| `audit_summaries/` | PIO and PigDetect leakage-audit summaries and traceability records. |
+| `evaluation_scripts/` | Evaluation and diagnostic scripts released for the manuscript. |
+| `figure_scripts/` | Scripts used to generate manuscript and supplementary figures where redistribution is possible. |
+| `figure_source_data/` | Fixed CSV/JSON source data for manuscript tables and figures. |
+| `main_figures/` | Final main-text figure files, including PigDetect Fig. 6. |
+| `supplementary_figures/` | Final supplementary figures. |
+| `supplementary_source_data/` | Source data for supplementary tables, including Tables S17a-S17g. |
+| `external_validation/PigDetect/` | PigDetect protocol, dataset role, and reproduction notes. |
+| `repository_audit/` | Cross-document numerical and traceability checks. |
 
-## Key source-data files
+## PigDetect manuscript-linked files
 
-The final manuscript no longer repeats the seed-repeatability table in the Supplementary Materials. The source data file with the historical `TableS11` name is retained only for traceability to the main manuscript seed-repeatability table.
+- `audit_summaries/PigDetect_clean_split_audit_summary.csv`
+- `audit_summaries/PigDetect_source_to_table_map.csv`
+- `supplementary_source_data/Table_S17a_PigDetect_clean_split_audit.csv`
+- `supplementary_source_data/Table_S17b_PigDetect_training_and_locked_test_performance.csv`
+- `supplementary_source_data/Table_S17c_PigDetect_scale_stratified_AP.csv`
+- `supplementary_source_data/Table_S17d_PigDetect_density_stratified_AP.csv`
+- `supplementary_source_data/Table_S17e_PigDetect_paired_bootstrap_summary.csv`
+- `supplementary_source_data/Table_S17f_PigDetect_locked_weight_deployment_benchmark.csv`
+- `supplementary_source_data/Table_S17g_PigDetect_source_to_manuscript_map.csv`
+- `figure_source_data/Table12_PigDetect_main_summary_source_data.csv`
+- `figure_source_data/Fig6_PigDetect_qualitative_evidence_metadata.json`
+- `main_figures/Fig6_PigDetect_external_validation.pdf`
+- `main_figures/Fig6_PigDetect_external_validation.png`
 
-| Manuscript item | Repository source data |
-|---|---|
-| Main manuscript seed-repeatability table | `supplementary_source_data/TableS11_YOLO11n_seed_repeatability_three_resolutions.csv` |
-| Tables S12a/S12b bootstrap delta and delta-difference analysis | `supplementary_source_data/TableS12_bootstrap_delta_difference.csv` |
-| Table S13 YOLOv8n cross-detector check | `supplementary_source_data/TableS13_YOLOv8n_cross_detector_accuracy_seed42.csv` |
-| Table S14 30-repeat YOLO11n deployment benchmark | `supplementary_source_data/TableS14_YOLO11n_deployment_benchmark_locked_weights.csv` and `raw_logs/RawLog_TableS14_YOLO11n_deployment_recheck30_raw_repeats.csv` |
-| Table S15 multi-objective resolution selection | `supplementary_source_data/TableS15_multi_objective_resolution_selection.csv` |
-| Table S16 multi-objective weight sensitivity | `supplementary_source_data/TableS16_multi_objective_weight_sensitivity.csv` |
-| Table S17 VisDrone2019-DET directional protocol-transfer demonstration | `supplementary_source_data/TableS17_VisDrone_YOLO11n_cross_domain_resolution_demo.csv` |
-| VisDrone official-split auxiliary duplicate audit | `audit_summaries/VisDrone_split_leakage_audit_summary.csv` and related `VisDrone_*` audit CSV files |
+## Reproduction outline
 
-## Online Resource map
+1. Check out the manuscript-linked `v1.2.0` release.
+2. Install the environment required by the relevant scripts; consult script headers and `evaluation_scripts/README.md` where provided.
+3. Obtain PIO and PigDetect from their original sources.
+4. Reconstruct or verify the released split manifests and audit outputs.
+5. Run the resolution-specific evaluation using the locked protocols documented in the manuscript and source records.
+6. Compare generated outputs with the fixed source data in `figure_source_data/` and `supplementary_source_data/`.
 
-| Online Resource | Description in the manuscript | Repository location |
-|---|---|---|
-| Online Resource 1 | Cross-split leakage audit, near-duplicate audit, component-level split diagnostics, and dataset split statistics | `audit_summaries/`, `split_manifest/`, `group_definitions/` |
-| Online Resource 2 | Maximum-detection sensitivity, strict diagnostic AP, and TP/FN/FP summaries | `supplementary_source_data/TableS4*` to `TableS7*`, `supplementary_figures/` |
-| Online Resource 3 | Counting calibration and confidence-threshold sensitivity | `counting_calibration/`, `supplementary_source_data/TableS8*` to `TableS10*` |
-| Online Resource 4 | Seed repeatability source data, cross-detector robustness, deployment benchmarking, multi-objective selection, weight sensitivity, VisDrone protocol-transfer demonstration, and qualitative examples | `supplementary_source_data/TableS11*`, `TableS13*` to `TableS17*`, `raw_logs/`, `evaluation_scripts/`, `figure_source_data/`, `main_figures/`, `figure_scripts/` |
-| Online Resource 5 | Bootstrap uncertainty and delta-difference analysis | `bootstrap/`, `supplementary_source_data/TableS12_bootstrap_delta_difference.csv` |
+## Raw-data and redistribution policy
 
-## Interpretation notes
+This repository does not redistribute raw PIO or PigDetect images, third-party dataset annotations where redistribution is restricted, Ultralytics source code, pretrained detector weights, trained checkpoints, or prediction overlays. Users must obtain third-party datasets from their original sources and comply with the relevant terms.
 
-- The tested input resolutions are the discrete candidate set `{800, 960, 1280}`. The repository does not support a universal claim that 960 px is optimal.
-- Under the manuscript's task interpretation, 1280 px is the accuracy-oriented setting for box-level detection and localization, 800 px is the lowest-cost baseline and can be preferable for scalar counting under validation-based calibration, and 960 px is selected only as a balanced candidate under the specified multi-objective weighting scheme.
-- YOLOv8n is used only as a cross-detector robustness check, not as a detector-ranking benchmark.
-- VisDrone2019-DET is used only as an external directional protocol-transfer demonstration, not as a VisDrone state-of-the-art benchmark.
-- Strict global-first diagnostic AP is an auxiliary contribution-oriented diagnostic measure. It is not directly comparable with ordinary subgroup AP or standard global AP.
-- Deployment timing and CUDA memory values are local-environment measurements. Table S14 peak memory refers to validation/inference CUDA memory, not training peak VRAM.
-- In Table S14, total latency is the median end-to-end time per image across formal repeats and may not equal the sum of independently computed stage medians.
+The repository license applies only to files authored and released in this repository. It does not relicense third-party datasets, software, pretrained models, or model weights.
 
-## External dependencies and model-license notice
+## Release alignment
 
-This repository contains source data, audit summaries, and reproduction scripts produced for the manuscript. It does **not** redistribute third-party raw datasets, Ultralytics source code, pretrained detector weights, trained checkpoints, or prediction overlays.
-
-The detector experiments were performed using YOLO-family detectors from Ultralytics, including YOLO11n as the main detector and YOLOv8n as a cross-detector check. Users who rerun training or inference should install Ultralytics from the official source and comply with the applicable Ultralytics license terms:
-
-- Ultralytics YOLO documentation: https://docs.ultralytics.com/models/yolo11
-- Ultralytics GitHub repository: https://github.com/ultralytics/ultralytics
-- Ultralytics license information: https://ultralytics.com/license
-
-The Ultralytics package metadata identifies the package license as AGPL-3.0. Commercial or closed-source downstream use may require an appropriate Ultralytics license. This repository's MIT license applies only to the files authored and released in this repository, unless a file states otherwise; it does not relicense Ultralytics software/models or third-party datasets.
-
-The experiments used a local Python environment with Python 3.10, PyTorch 2.x, Ultralytics 8.x, CUDA-enabled GPU execution where applicable, and common scientific Python packages such as pandas, numpy, matplotlib, Pillow, OpenCV/scikit-image utilities. Exact local package versions may vary by script; the manuscript reports the locked benchmark environment where needed.
-
-## Raw data availability and redistribution policy
-
-The original PIO and VisDrone2019-DET images are **not redistributed** in this repository. Users should obtain raw data from the original dataset sources and comply with each dataset's terms of use.
-
-- PIO dataset: Boniche et al., *Scientific Data* 13, 801 (2026), https://doi.org/10.1038/s41597-026-07114-5
-- VisDrone2019-DET dataset: official VisDrone dataset repository, https://github.com/VisDrone/VisDrone-Dataset
-
-After obtaining the raw images from the official dataset sources, the materials in this repository provide the split manifests, source-group metadata, hash/audit summaries, grouped definitions, source data, and scripts needed to inspect or reproduce the reported analyses.
-
-## Reproducibility workflow
-
-A typical reproduction workflow is:
-
-1. Check out the archived GitHub release tag `v1.1.0`.
-2. Install the Python environment required by the relevant scripts. See `evaluation_scripts/README.md` and each script header for details.
-3. Obtain the raw PIO and, where needed, VisDrone2019-DET images from their original sources.
-4. Arrange local image and label paths according to the split manifests and script arguments.
-5. Use the locked CSV source data to regenerate paper figures/tables that do not require raw images.
-6. Use the training/evaluation scripts only when local raw images, labels, model weights, and prediction-output files are available.
-
-Some scripts regenerate plots from locked CSV source data. Other scripts regenerate training, inference, audit, or qualitative visualization outputs and therefore require local raw images and/or local prediction CSV files that are not redistributed here.
-
-## Data and code availability statement
-
-The original PIO dataset and the VisDrone2019-DET dataset should be obtained from their official sources. This repository provides the leakage-controlled PIO split manifest, source-group metadata, leakage-audit summaries, near-duplicate audit outputs, group definitions, bootstrap outputs, counting-calibration outputs, figure source data, supplementary table source data, evaluation scripts, deployment-benchmarking scripts, VisDrone conversion/audit scripts, and traceability logs used to support the manuscript. Raw PIO and VisDrone images, pretrained detector weights, trained checkpoints, and prediction overlays are not redistributed.
+Release `v1.2.0` replaces the active VisDrone protocol-transfer materials with the manuscript-linked PigDetect livestock-domain external validation. Historical releases remain available through Git history and their archived tags.
 
 ## Citation
 
-If you use these materials, please cite the manuscript and this repository release.
+Please cite the manuscript and the manuscript-linked repository release:
 
-Repository release citation:
+> Song, Y. *Leakage-controlled and deployment-aware input-resolution selection for dense broiler detection in precision poultry monitoring*. GitHub repository release v1.2.0, 2026.
 
-Song, Y. Leakage-Controlled and Task-Objective-Dependent Input-Resolution Diagnosis for Dense Small-Object Detection in High-Density Broiler-House Monitoring. GitHub repository release v1.1.0 - Precision Agriculture submission-ready materials. 2026.
-
-Please also cite the original datasets and third-party software used in any reproduced experiments, including the PIO dataset paper, the VisDrone dataset paper/source, and Ultralytics YOLO where applicable.
-
-## License
-
-The repository's own scripts, source-data files, and documentation are released under the MIT License unless otherwise stated. Third-party datasets, Ultralytics software/models, and any locally downloaded detector weights are governed by their own licenses and terms of use.
-
-
-## Revision update: counting sensitivity and threshold robustness
-
-This update adds Tables S18 and S19 for validation-source-component sensitivity and counting-threshold robustness. Source CSV files are provided in supplementary_source_data/, and reproduction scripts are provided in scripts/revision_experiments/.
-
-
+Repository: `uaena7-bit/pio-resolution-diagnosis-yolo11n`

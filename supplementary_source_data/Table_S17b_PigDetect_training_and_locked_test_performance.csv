@@ -1,0 +1,4 @@
+Input (px),Epochs,Training (h),Val mAP50-95,Test P,Test R,Test mAP50,Test mAP50-95,Role
+800,300,10.151,0.8570,0.9733,0.9336,0.9821,0.7673,Lowest cost
+960,297,11.301,0.8640,0.9688,0.9408,0.9820,0.7757,Intermediate
+1280,242,11.061,0.8760,0.9758,0.9407,0.9830,0.7844,Highest accuracy

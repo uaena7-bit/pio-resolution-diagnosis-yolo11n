@@ -1,0 +1,30 @@
+PigDetect manuscript consistency audit
+=======================================
+
+Locked dataset:
+- Train 2,431; validation 241; test 250; total 2,922; test instances 5,436.
+- Original audit: 18 SSIM-confirmed train-validation near-duplicate pairs involving 9 validation images.
+- After cleaning: filename, stem, image MD5, label MD5, and SSIM-confirmed cross-split overlap = 0.
+
+Locked main test metrics:
+- 800: P 0.9733; R 0.9336; mAP50 0.9821; mAP50-95 0.7673.
+- 960: P 0.9688; R 0.9408; mAP50 0.9820; mAP50-95 0.7757.
+- 1280: P 0.9758; R 0.9407; mAP50 0.9830; mAP50-95 0.7844.
+
+Locked adjacent paired-bootstrap intervals:
+- 960-800: +0.0083 [0.0046, 0.0125].
+- 1280-960: +0.0087 [0.0046, 0.0139].
+- Adjacent-gain difference interval crosses zero; no marginal-gain reduction claim for PigDetect.
+
+Locked deployment summary:
+- 800: 10.06 GFLOPs; 4.76 [0.09] ms/image; 68.2 MiB.
+- 960: 14.49 GFLOPs; 5.49 [0.07] ms/image; 79.7 MiB.
+- 1280: 25.76 GFLOPs; 7.45 [0.16] ms/image; 111.9 MiB.
+
+Cross-document checks:
+- Main Table 12 uses 4 decimals for detection metrics and bootstrap deltas/CIs, 2 decimals for GFLOPs and latency, and 1 decimal for memory.
+- Supplementary Tables S17a-S17g retain higher precision where appropriate.
+- Methods explicitly states single-seed PigDetect external-validation role.
+- Discussion explicitly distinguishes test-image bootstrap uncertainty from training-seed uncertainty.
+- All VisDrone content was removed from the revised main manuscript and supplementary material.
+- Fig. 6 artwork was not changed; a placement marker and locked-protocol caption were inserted because the exact locked artwork file was not present in the active document package.
