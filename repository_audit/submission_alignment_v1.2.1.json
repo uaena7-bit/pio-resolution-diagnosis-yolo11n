@@ -1,0 +1,22 @@
+{
+  "release": "v1.2.1",
+  "date": "2026-07-30",
+  "manuscript_title": "Leakage-Controlled and Deployment-Oriented Diagnosis of Input-Resolution Trade-offs for Dense Broiler Detection",
+  "primary_resolutions_px": [
+    800,
+    960,
+    1280
+  ],
+  "exploratory_resolution_px": 1024,
+  "interpretation": {
+    "800": "lowest counting MAE only under validation-based threshold-transfer protocol",
+    "960": "highest only under specified illustrative composite weighting",
+    "1280": "highest box-level localization accuracy at highest measured computational cost",
+    "universal_optimum": false
+  },
+  "figure_updates": {
+    "Fig4": "continuous axis; increased top and left safety margins",
+    "FigS2": "increased legend/x-axis and inter-panel spacing",
+    "FigS3": "consistent styles; 1024 only in panel a; no obstructing text box"
+  }
+}

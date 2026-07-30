@@ -1,0 +1,21 @@
+GITHUB SYNC INSTRUCTIONS
+
+Recommended release:
+v1.2.1 - Submission-aligned final figures and metadata
+
+Why a new patch release:
+v1.2.0 is already public. A new v1.2.1 release preserves version history and avoids
+silently rewriting an existing manuscript-linked tag.
+
+Apply this overlay to the repository root:
+1. Replace README.md and CITATION.cff.
+2. Add release_notes_v1.2.1.md and release_notes/release_notes_v1.2.1.md.
+3. Replace/add files under main_figures/, supplementary_figures/,
+   figure_source_data/, supplementary_source_data/, figure_scripts/, and paper_pdfs/.
+4. Edit the GitHub About description using GITHUB_ABOUT_TEXT.txt.
+5. Commit message:
+   Align repository with final submission and release v1.2.1
+6. Create tag/release:
+   v1.2.1
+7. Use release_notes_v1.2.1.md as the release body.
+8. Verify the release URL and then use the v1.2.1 manuscript package for journal submission.

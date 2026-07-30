@@ -1,0 +1,1 @@
+Leakage-controlled and deployment-oriented diagnosis of input-resolution trade-offs for dense broiler detection using PIO and PigDetect validation.

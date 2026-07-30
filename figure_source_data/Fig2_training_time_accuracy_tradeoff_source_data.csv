@@ -1,4 +1,5 @@
-input_resolution_px,training_time_h,test_mAP50_95
-800,4.48,0.7199
-960,7.29,0.742
-1280,22.54,0.7543
+input_resolution_px,training_time_h,test_mAP50_95,role
+800,4.48,0.7199,primary
+960,7.29,0.742,primary
+1024,9.59,0.745,exploratory
+1280,22.54,0.7543,primary
