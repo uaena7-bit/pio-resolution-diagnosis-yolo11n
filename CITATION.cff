@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "If you use these reproducibility materials, please cite the associated manuscript and the v1.2.0 repository release."
-title: "Reproducibility materials for leakage-controlled and deployment-aware input-resolution selection for dense broiler detection in precision poultry monitoring"
+message: "If you use these reproducibility materials, please cite the associated manuscript and the v1.2.1 repository release."
+title: "Reproducibility materials for Leakage-Controlled and Deployment-Oriented Diagnosis of Input-Resolution Trade-offs for Dense Broiler Detection"
 type: software
 authors:
   - family-names: Song
@@ -19,16 +19,17 @@ authors:
     given-names: Zhekang
     affiliation: Hangzhou Dianzi University
 repository-code: "https://github.com/uaena7-bit/pio-resolution-diagnosis-yolo11n"
-url: "https://github.com/uaena7-bit/pio-resolution-diagnosis-yolo11n/releases/tag/v1.2.0"
-version: "1.2.0"
-date-released: "2026-07-13"
+url: "https://github.com/uaena7-bit/pio-resolution-diagnosis-yolo11n/releases/tag/v1.2.1"
+version: "1.2.1"
+date-released: "2026-07-30"
 license: MIT
 keywords:
   - precision poultry monitoring
   - dense broiler detection
   - input resolution
   - leakage-controlled evaluation
-  - deployment-aware evaluation
+  - deployment-oriented diagnosis
+  - counting calibration
   - YOLO11n
   - PIO dataset
   - PigDetect
