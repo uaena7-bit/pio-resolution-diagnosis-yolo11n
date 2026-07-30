@@ -1,7 +1,7 @@
 ﻿# Evaluation scripts
 
 This directory contains evaluation and reproduction scripts supporting the
-leakage-controlled and deployment-aware input-resolution study.
+leakage-controlled and deployment-oriented diagnosis of input-resolution trade-offs.
 
 ## Scope
 

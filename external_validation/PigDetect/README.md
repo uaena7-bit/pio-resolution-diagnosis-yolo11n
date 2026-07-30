@@ -2,7 +2,7 @@
 
 PigDetect is used as an independent livestock-domain external-validation dataset for the manuscript:
 
-**Leakage-controlled and deployment-aware input-resolution selection for dense broiler detection in precision poultry monitoring**
+**Leakage-Controlled and Deployment-Oriented Diagnosis of Input-Resolution Trade-offs for Dense Broiler Detection**
 
 ## Role in the study
 

@@ -118,7 +118,7 @@ def draw_panel1(ax, x, y, w, h):
     rounded_box(ax, x + w * 0.130, y + h * 0.096, w * 0.740, h * 0.088,
                 fc="#fbfbfb", ec="#d0d0d0", lw=0.70, r=0.012, z=4)
     text(ax, x + w / 2, y + h * 0.140,
-         "Dataset basis for\nresolution selection",
+         "Dataset basis for\nresolution diagnosis",
          size=5.55, weight="bold", color=COL["muted2"], ha="center", ls=1.05)
 
 def draw_database(ax, cx, cy, color):
